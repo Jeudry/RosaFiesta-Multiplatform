@@ -1,6 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.plcoding.rosafiesta.convention.configureKotlinAndroid
-import com.plcoding.rosafiesta.convention.libs
+import com.jeudry.rosafiesta.convention.configureKotlinAndroid
+import com.jeudry.rosafiesta.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -14,7 +14,7 @@ class AndroidApplicationConventionPlugin: Plugin<Project> {
             }
 
             extensions.configure<ApplicationExtension> {
-                namespace = "com.plcoding.rosafiesta"
+                namespace = "com.jeudry.rosafiesta"
 
                 defaultConfig {
                     applicationId = libs.findVersion("projectApplicationId").get().toString()

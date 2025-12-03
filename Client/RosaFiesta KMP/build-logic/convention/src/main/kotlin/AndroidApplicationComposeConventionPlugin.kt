@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.plcoding.rosafiesta.convention.configureAndroidCompose
+import com.jeudry.rosafiesta.convention.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
@@ -9,7 +9,7 @@ class AndroidApplicationComposeConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.plcoding.convention.android.application")
+                apply("com.jeudry.convention.android.application")
                 apply("org.jetbrains.kotlin.plugin.compose")
             }
 

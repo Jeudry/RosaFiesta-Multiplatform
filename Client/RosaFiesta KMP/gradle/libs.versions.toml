@@ -50,7 +50,7 @@ moko = "0.19.1"
 buildkonfig = "0.17.1"
 kermit = "2.0.6"
 
-projectApplicationId = "com.plcoding.rosafiesta"
+projectApplicationId = "com.jeudry.rosafiesta"
 projectVersionName = "1.0"
 projectMinSdkVersion = "26"
 projectTargetSdkVersion = "36"
@@ -175,14 +175,14 @@ androidx-runner = { group = "androidx.test", name = "runner", version.ref = "run
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 
 [plugins]
-convention-android-application = { id = "com.plcoding.convention.android.application", version = "unspecified" }
-convention-android-application-compose = { id = "com.plcoding.convention.android.application.compose", version = "unspecified" }
-convention-cmp-application = { id = "com.plcoding.convention.cmp.application", version = "unspecified" }
-convention-kmp-library = { id = "com.plcoding.convention.kmp.library", version = "unspecified" }
-convention-cmp-library = { id = "com.plcoding.convention.cmp.library", version = "unspecified" }
-convention-cmp-feature = { id = "com.plcoding.convention.cmp.feature", version = "unspecified" }
-convention-buildkonfig = { id = "com.plcoding.convention.buildkonfig", version = "unspecified" }
-convention-room = { id = "com.plcoding.convention.room", version = "unspecified" }
+convention-android-application = { id = "com.jeudry.convention.android.application", version = "unspecified" }
+convention-android-application-compose = { id = "com.jeudry.convention.android.application.compose", version = "unspecified" }
+convention-cmp-application = { id = "com.jeudry.convention.cmp.application", version = "unspecified" }
+convention-kmp-library = { id = "com.jeudry.convention.kmp.library", version = "unspecified" }
+convention-cmp-library = { id = "com.jeudry.convention.cmp.library", version = "unspecified" }
+convention-cmp-feature = { id = "com.jeudry.convention.cmp.feature", version = "unspecified" }
+convention-buildkonfig = { id = "com.jeudry.convention.buildkonfig", version = "unspecified" }
+convention-room = { id = "com.jeudry.convention.room", version = "unspecified" }
 
 # Android
 android-application = { id = "com.android.application", version.ref = "agp" }

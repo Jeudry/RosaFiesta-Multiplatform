@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="rosafiesta.pl-coding.com" />
+                <data android:host="rosafiesta.jeudry.com" />
 
                 <data android:pathPrefix="/api/auth/verify" />
                 <data android:pathPrefix="/api/auth/reset-password" />
@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="rosafiesta" />
-                <data android:host="rosafiesta.pl-coding.com" />
+                <data android:host="rosafiesta.jeudry.com" />
 
                 <data android:pathPrefix="/api/auth/verify" />
                 <data android:pathPrefix="/api/auth/reset-password" />

@@ -1,4 +1,4 @@
-import com.plcoding.rosafiesta.convention.libs
+import com.jeudry.rosafiesta.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
@@ -8,7 +8,7 @@ class CmpFeatureConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.plcoding.convention.cmp.library")
+                apply("com.jeudry.convention.cmp.library")
             }
 
             dependencies {
