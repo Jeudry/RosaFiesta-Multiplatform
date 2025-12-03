@@ -1,0 +1,199 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-chat-participants-table
+      author: rosafiesta-team
+      comment: Create chat_participants table in chat_service schema
+      changes:
+        - createTable:
+            tableName: chat_participants
+            schemaName: chat_service
+            columns:
+              - column:
+                  name: user_id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_chat_participants
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: uk_chat_participants_username
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: uk_chat_participants_email
+              - column:
+                  name: profile_picture_url
+                  type: TEXT
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+        - createIndex:
+            indexName: idx_chat_participant_username
+            schemaName: chat_service
+            tableName: chat_participants
+            columns:
+              - column:
+                  name: username
+        - createIndex:
+            indexName: idx_chat_participant_email
+            schemaName: chat_service
+            tableName: chat_participants
+            columns:
+              - column:
+                  name: email
+      rollback:
+        - dropTable:
+            tableName: chat_participants
+            schemaName: chat_service
+
+  - changeSet:
+      id: 003-create-chats-table
+      author: rosafiesta-team
+      comment: Create chats table in chat_service schema
+      changes:
+        - createTable:
+            tableName: chats
+            schemaName: chat_service
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_chats
+              - column:
+                  name: creator_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_chats_creator
+                    references: chat_service.chat_participants(user_id)
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+      rollback:
+        - dropTable:
+            tableName: chats
+            schemaName: chat_service
+
+  - changeSet:
+      id: 003-create-chat-participants-cross-ref-table
+      author: rosafiesta-team
+      comment: Create chat_participants_cross_ref junction table
+      changes:
+        - createTable:
+            tableName: chat_participants_cross_ref
+            schemaName: chat_service
+            columns:
+              - column:
+                  name: chat_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_chat_participants_cross_ref_chat
+                    references: chat_service.chats(id)
+              - column:
+                  name: participant_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_chat_participants_cross_ref_participant
+                    references: chat_service.chat_participants(user_id)
+        - addPrimaryKey:
+            tableName: chat_participants_cross_ref
+            schemaName: chat_service
+            columnNames: chat_id, participant_id
+            constraintName: pk_chat_participants_cross_ref
+        - createIndex:
+            indexName: idx_chat_participant_chat_id_user_id
+            schemaName: chat_service
+            tableName: chat_participants_cross_ref
+            unique: true
+            columns:
+              - column:
+                  name: chat_id
+              - column:
+                  name: participant_id
+        - createIndex:
+            indexName: idx_chat_participant_user_id_chat_id
+            schemaName: chat_service
+            tableName: chat_participants_cross_ref
+            unique: true
+            columns:
+              - column:
+                  name: participant_id
+              - column:
+                  name: chat_id
+      rollback:
+        - dropTable:
+            tableName: chat_participants_cross_ref
+            schemaName: chat_service
+
+  - changeSet:
+      id: 003-create-chat-messages-table
+      author: rosafiesta-team
+      comment: Create chat_messages table in chat_service schema
+      changes:
+        - createTable:
+            tableName: chat_messages
+            schemaName: chat_service
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_chat_messages
+              - column:
+                  name: content
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: chat_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_chat_messages_chat
+                    references: chat_service.chats(id)
+                    deleteCascade: true
+              - column:
+                  name: sender_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_chat_messages_sender
+                    references: chat_service.chat_participants(user_id)
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+        - createIndex:
+            indexName: idx_chat_message_chat_id_created_at
+            schemaName: chat_service
+            tableName: chat_messages
+            columns:
+              - column:
+                  name: chat_id
+              - column:
+                  name: created_at
+                  descending: true
+      rollback:
+        - dropTable:
+            tableName: chat_messages
+            schemaName: chat_service

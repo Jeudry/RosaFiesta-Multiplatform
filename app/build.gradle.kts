@@ -32,7 +32,9 @@ dependencies {
     implementation(libs.jackson.datatype.jsr310)
 
     implementation(libs.kotlin.reflect)
-
+    
+    // Liquibase for database migrations
+    implementation("org.liquibase:liquibase-core")
 
     runtimeOnly(libs.postgresql)
 }

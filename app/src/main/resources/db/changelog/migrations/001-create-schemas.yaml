@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-schemas
+      author: rosafiesta-team
+      comment: Create application schemas for modular architecture
+      changes:
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS chat_service;
+            comment: Schema for chat module
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS user_service;
+            comment: Schema for user management module
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS notification_service;
+            comment: Schema for notification module
+      rollback:
+        - sql:
+            sql: DROP SCHEMA IF EXISTS notification_service CASCADE;
+        - sql:
+            sql: DROP SCHEMA IF EXISTS user_service CASCADE;
+        - sql:
+            sql: DROP SCHEMA IF EXISTS chat_service CASCADE;
