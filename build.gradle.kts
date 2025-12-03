@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.jpa) apply false
 }
 
-group = "com.adventist"
+group = "com.rosafiesta"
 version = "unspecified"
 
 subprojects {

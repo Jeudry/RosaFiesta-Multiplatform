@@ -20,7 +20,7 @@ pluginManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "adventist"
+rootProject.name = "rosafiesta-api"
 
 include("app")
 

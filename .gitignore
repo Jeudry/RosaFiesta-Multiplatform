@@ -42,6 +42,13 @@ app/src/main/resources/firebase-credentials/adventist-firebase-adminsdk.json
 .env
 .env.*
 *.env
+scripts/.env.local
+
+# Ignorar run configurations con credenciales (solo subir templates)
+.run/*[DEV]*.xml
+.run/*[PROD]*.xml
+.idea/runConfigurations/*[DEV]*.xml
+.idea/runConfigurations/*[PROD]*.xml
 
 # Ignorar carpetas de compilación y binarios (ya cubierto, pero se refuerza)
 build/

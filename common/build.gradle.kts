@@ -1,9 +1,9 @@
 plugins {
     id("java-library")
-    id("adventist.kotlin-common")
+    id("rosafiesta.kotlin-common")
 }
 
-group = "com.adventist"
+group = "com.rosafiesta"
 version = "0.0.1-SNAPSHOT"
 
 repositories {

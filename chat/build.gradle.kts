@@ -1,10 +1,10 @@
 plugins {
     id("java-library")
-    id("adventist.spring-boot-service")
+    id("rosafiesta.spring-boot-service")
     kotlin("plugin.spring")
 }
 
-group = "com.adventist"
+group = "com.rosafiesta"
 version = "0.0.1-SNAPSHOT"
 
 repositories {

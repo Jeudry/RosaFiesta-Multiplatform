@@ -3,7 +3,7 @@ spring:
     hibernate:
       ddl-auto: validate
 jwt:
-  expiration_minutes: 15
+  expiration-minutes: 15
 nginx:
   require-proxy: true
   trustedIps:
@@ -14,13 +14,13 @@ nginx:
     - "172.17.0.0/16"
     - "10.0.0.5/32"
 
-adventist:
+rosafiesta:
   web-socket:
     allowedOrigins:
       - "http://localhost:8080"
-      - "http://adventist.strangled.net"
+      - "http://rosafiesta.strangled.net"
   email:
-    url: "https://adventist.adventist.com"
+    url: "https://rosafiesta.com"
   ip:
     rate-limit:
       apply-limit: true

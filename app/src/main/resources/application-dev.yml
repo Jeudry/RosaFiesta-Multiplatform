@@ -18,11 +18,11 @@ spring:
             trust: smtp.gmail.com
 
 jwt:
-  expiration_minutes: 1000
+  expiration-minutes: 1000
 nginx:
   require-proxy: false
 
-adventist:
+rosafiesta:
   web-socket:
     allowedOrigins:
       - "http://localhost:8080"
@@ -35,4 +35,4 @@ adventist:
       
 logging:
   level:
-    com.adventist.adventist: DEBUG
+    com.rosafiesta.api: DEBUG

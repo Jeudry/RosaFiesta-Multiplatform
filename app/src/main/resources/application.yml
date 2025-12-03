@@ -1,10 +1,12 @@
 spring:
   application:
     name: chirp
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:prod}
 
   datasource:
-    url: jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres?sslmode=require
-    username: postgres.aqotufsmvyrfeuvfnjhv
+    url: jdbc:postgresql://db.bwbxfdqyswxvxfklwhce.supabase.co:5432/postgres?sslmode=require
+    username: postgres
     password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
@@ -79,8 +81,9 @@ spring:
 
 jwt:
   secret: ${JWT_SECRET_BASE64}
+  expiration-minutes: 60
 
-adventist:
+rosafiesta:
   email:
     from: ${MAIL_FROM_EMAIL}
     verification:
@@ -102,7 +105,7 @@ supabase:
   service-key: ${SUPABASE_SERVICE_KEY}
   
 firebase:
-  credentials-path: "classpath:firebase-credentials/adventist-firebase-adminsdk.json"
+  credentials-path: "classpath:firebase-credentials/rosafiesta-firebase-adminsdk.json"
   
 server:
   port: 8080
