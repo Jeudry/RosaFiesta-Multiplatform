@@ -1,4 +1,4 @@
-package com.plcoding.chirp.navigation
+package com.plcoding.rosafiesta.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

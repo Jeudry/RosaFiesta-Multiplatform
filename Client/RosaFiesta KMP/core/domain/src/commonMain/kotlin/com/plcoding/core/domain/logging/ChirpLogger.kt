@@ -1,6 +1,6 @@
 package com.plcoding.core.domain.logging
 
-interface ChirpLogger {
+interface RosaFiestaLogger {
     fun debug(message: String)
     fun info(message: String)
     fun warn(message: String)

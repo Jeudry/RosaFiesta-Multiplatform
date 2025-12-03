@@ -12,10 +12,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.cancel
-import chirp.feature.chat.presentation.generated.resources.profile_settings
-import com.plcoding.core.designsystem.components.buttons.ChirpIconButton
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.cancel
+import rosafiesta.feature.chat.presentation.generated.resources.profile_settings
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaIconButton
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 
@@ -44,7 +44,7 @@ fun ProfileHeaderSection(
                 color = MaterialTheme.colorScheme.extended.textSecondary
             )
         }
-        ChirpIconButton(
+        RosaFiestaIconButton(
             onClick = onCloseClick
         ) {
             Icon(

@@ -17,7 +17,7 @@ import com.plcoding.chat.domain.models.ChatParticipant
 import com.plcoding.chat.presentation.model.MessageUi
 import com.plcoding.chat.presentation.util.getChatBubbleColorForUser
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.presentation.util.UiText
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -88,7 +88,7 @@ private fun DateSeparatorUi(
 @Composable
 @Preview
 fun MessageListItemLocalMessageUiPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         MessageListItemUi(
             messageUi = MessageUi.LocalUserMessage(
                 id = "1",
@@ -111,7 +111,7 @@ fun MessageListItemLocalMessageUiPreview() {
 @Composable
 @Preview
 fun MessageListItemLocalMessageRetryUiPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         MessageListItemUi(
             messageUi = MessageUi.LocalUserMessage(
                 id = "1",
@@ -133,7 +133,7 @@ fun MessageListItemLocalMessageRetryUiPreview() {
 @Composable
 @Preview
 fun MessageListItemOtherMessageUiPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         MessageListItemUi(
             messageUi = MessageUi.OtherUserMessage(
                 id = "1",

@@ -7,19 +7,19 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.auth.presentation.generated.resources.Res
-import chirp.feature.auth.presentation.generated.resources.account_successfully_created
-import chirp.feature.auth.presentation.generated.resources.login
-import chirp.feature.auth.presentation.generated.resources.resend_verification_email
-import chirp.feature.auth.presentation.generated.resources.resent_verification_email
-import chirp.feature.auth.presentation.generated.resources.verification_email_sent_to_x
-import com.plcoding.core.designsystem.components.brand.ChirpSuccessIcon
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.components.layouts.ChirpAdaptiveResultLayout
-import com.plcoding.core.designsystem.components.layouts.ChirpSimpleResultLayout
-import com.plcoding.core.designsystem.components.layouts.ChirpSnackbarScaffold
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import rosafiesta.feature.auth.presentation.generated.resources.Res
+import rosafiesta.feature.auth.presentation.generated.resources.account_successfully_created
+import rosafiesta.feature.auth.presentation.generated.resources.login
+import rosafiesta.feature.auth.presentation.generated.resources.resend_verification_email
+import rosafiesta.feature.auth.presentation.generated.resources.resent_verification_email
+import rosafiesta.feature.auth.presentation.generated.resources.verification_email_sent_to_x
+import com.plcoding.core.designsystem.components.brand.RosaFiestaSuccessIcon
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaAdaptiveResultLayout
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaSimpleResultLayout
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaSnackbarScaffold
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
@@ -66,21 +66,21 @@ fun RegisterSuccessScreen(
     onAction: (RegisterSuccessAction) -> Unit,
     snackbarHostState: SnackbarHostState
 ) {
-    ChirpSnackbarScaffold(
+    RosaFiestaSnackbarScaffold(
         snackbarHostState = snackbarHostState
     ) {
-        ChirpAdaptiveResultLayout {
-            ChirpSimpleResultLayout(
+        RosaFiestaAdaptiveResultLayout {
+            RosaFiestaSimpleResultLayout(
                 title = stringResource(Res.string.account_successfully_created),
                 description = stringResource(
                     Res.string.verification_email_sent_to_x,
                     state.registeredEmail
                 ),
                 icon = {
-                    ChirpSuccessIcon()
+                    RosaFiestaSuccessIcon()
                 },
                 primaryButton = {
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = stringResource(Res.string.login),
                         onClick = {
                             onAction(RegisterSuccessAction.OnLoginClick)
@@ -90,7 +90,7 @@ fun RegisterSuccessScreen(
                     )
                 },
                 secondaryButton = {
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = stringResource(Res.string.resend_verification_email),
                         onClick = {
                             onAction(RegisterSuccessAction.OnResendVerificationEmailClick)
@@ -99,7 +99,7 @@ fun RegisterSuccessScreen(
                             .fillMaxWidth(),
                         enabled = !state.isResendingVerificationEmail,
                         isLoading = state.isResendingVerificationEmail,
-                        style = ChirpButtonStyle.SECONDARY
+                        style = RosaFiestaButtonStyle.SECONDARY
                     )
                 },
                 secondaryError = state.resendVerificationError?.asString()
@@ -111,7 +111,7 @@ fun RegisterSuccessScreen(
 @Preview
 @Composable
 private fun Preview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         RegisterSuccessScreen(
             state = RegisterSuccessState(
                 registeredEmail = "test@preview.com"

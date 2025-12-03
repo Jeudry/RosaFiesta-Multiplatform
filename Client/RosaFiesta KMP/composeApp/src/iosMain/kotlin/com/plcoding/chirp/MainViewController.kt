@@ -1,4 +1,4 @@
-package com.plcoding.chirp
+package com.plcoding.rosafiesta
 
 import androidx.compose.ui.window.ComposeUIViewController
 

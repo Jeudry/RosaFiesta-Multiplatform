@@ -1,4 +1,4 @@
-package com.plcoding.chirp
+package com.plcoding.rosafiesta
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
@@ -8,9 +8,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
 import com.plcoding.auth.presentation.navigation.AuthGraphRoutes
 import com.plcoding.chat.presentation.navigation.ChatGraphRoutes
-import com.plcoding.chirp.navigation.DeepLinkListener
-import com.plcoding.chirp.navigation.NavigationRoot
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.rosafiesta.MainEvent
+import com.plcoding.rosafiesta.MainViewModel
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
+import com.plcoding.rosafiesta.navigation.DeepLinkListener
+import com.plcoding.rosafiesta.navigation.NavigationRoot
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
@@ -44,7 +47,7 @@ fun App(
         }
     }
 
-    ChirpTheme(
+    RosaFiestaTheme(
         darkTheme = isDarkTheme
     ) {
         if(!state.isCheckingAuth) {

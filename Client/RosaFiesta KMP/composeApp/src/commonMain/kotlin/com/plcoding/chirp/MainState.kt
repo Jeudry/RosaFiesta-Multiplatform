@@ -1,4 +1,4 @@
-package com.plcoding.chirp
+package com.plcoding.rosafiesta
 
 data class MainState(
     val isLoggedIn: Boolean = false,

@@ -25,14 +25,14 @@ import com.plcoding.chat.database.view.LastMessageView
     ],
     version = 1,
 )
-@ConstructedBy(ChirpChatDatabaseConstructor::class)
-abstract class ChirpChatDatabase: RoomDatabase() {
+@ConstructedBy(RosaFiestaChatDatabaseConstructor::class)
+abstract class RosaFiestaChatDatabase: RoomDatabase() {
     abstract val chatDao: ChatDao
     abstract val chatParticipantDao: ChatParticipantDao
     abstract val chatMessageDao: ChatMessageDao
     abstract val chatParticipantsCrossRefDao: ChatParticipantsCrossRefDao
 
     companion object {
-        const val DB_NAME = "chirp.db"
+        const val DB_NAME = "rosafiesta.db"
     }
 }

@@ -10,8 +10,8 @@ import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 
 actual class DatabaseFactory {
-    actual fun create(): RoomDatabase.Builder<ChirpChatDatabase> {
-        val dbFile = documentDirectory() + "/${ChirpChatDatabase.DB_NAME}"
+    actual fun create(): RoomDatabase.Builder<RosaFiestaChatDatabase> {
+        val dbFile = documentDirectory() + "/${RosaFiestaChatDatabase.DB_NAME}"
 
         return Room.databaseBuilder(dbFile)
     }

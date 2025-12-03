@@ -1,6 +1,6 @@
 package com.plcoding.chat.data.network
 
-import com.plcoding.core.domain.logging.ChirpLogger
+import com.plcoding.core.domain.logging.RosaFiestaLogger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.ensureActive
@@ -14,12 +14,12 @@ import java.net.Socket
 import kotlin.coroutines.coroutineContext
 
 actual class ConnectivityObserver(
-    private val chirpLogger: ChirpLogger
+    private val rosaFiestaLogger: RosaFiestaLogger
 ) {
     actual val isConnected = flow {
         while(true) {
             val connected = isConnected()
-            chirpLogger.info("Connectivity state on Desktop: $connected")
+            rosaFiestaLogger.info("Connectivity state on Desktop: $connected")
             emit(connected)
             delay(5000L)
         }

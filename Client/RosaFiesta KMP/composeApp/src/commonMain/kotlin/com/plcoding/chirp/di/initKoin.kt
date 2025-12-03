@@ -1,4 +1,4 @@
-package com.plcoding.chirp.di
+package com.plcoding.rosafiesta.di
 
 import com.plcoding.auth.presentation.di.authPresentationModule
 import com.plcoding.chat.data.di.chatDataModule

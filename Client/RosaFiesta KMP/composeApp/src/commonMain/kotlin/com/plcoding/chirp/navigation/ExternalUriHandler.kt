@@ -1,4 +1,4 @@
-package com.plcoding.chirp.navigation
+package com.plcoding.rosafiesta.navigation
 
 object ExternalUriHandler {
 

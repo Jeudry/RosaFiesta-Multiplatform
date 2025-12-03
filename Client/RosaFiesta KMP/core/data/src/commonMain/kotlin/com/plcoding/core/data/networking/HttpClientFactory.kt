@@ -5,7 +5,7 @@ import com.plcoding.core.data.dto.AuthInfoSerializable
 import com.plcoding.core.data.dto.requests.RefreshRequest
 import com.plcoding.core.data.mappers.toDomain
 import com.plcoding.core.domain.auth.SessionStorage
-import com.plcoding.core.domain.logging.ChirpLogger
+import com.plcoding.core.domain.logging.RosaFiestaLogger
 import com.plcoding.core.domain.util.onFailure
 import com.plcoding.core.domain.util.onSuccess
 import io.ktor.client.HttpClient
@@ -29,7 +29,7 @@ import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.serialization.json.Json
 
 class HttpClientFactory(
-    private val chirpLogger: ChirpLogger,
+    private val rosaFiestaLogger: RosaFiestaLogger,
     private val sessionStorage: SessionStorage,
 ) {
 
@@ -49,7 +49,7 @@ class HttpClientFactory(
             install(Logging) {
                 logger = object : Logger {
                     override fun log(message: String) {
-                        chirpLogger.debug(message)
+                        rosaFiestaLogger.debug(message)
                     }
                 }
                 level = LogLevel.ALL

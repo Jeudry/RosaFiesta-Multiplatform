@@ -9,12 +9,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.add
-import chirp.feature.chat.presentation.generated.resources.email_or_username
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.components.textfields.ChirpTextField
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.add
+import rosafiesta.feature.chat.presentation.generated.resources.email_or_username
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaTextField
 import com.plcoding.core.presentation.util.UiText
 import org.jetbrains.compose.resources.stringResource
 
@@ -37,7 +37,7 @@ fun ChatParticipantSearchTextSection(
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        ChirpTextField(
+        RosaFiestaTextField(
             state = queryState,
             modifier = Modifier
                 .weight(1f),
@@ -49,10 +49,10 @@ fun ChatParticipantSearchTextSection(
             keyboardType = KeyboardType.Email,
             onFocusChanged = onFocusChanged
         )
-        ChirpButton(
+        RosaFiestaButton(
             text = stringResource(Res.string.add),
             onClick = onAddClick,
-            style = ChirpButtonStyle.SECONDARY,
+            style = RosaFiestaButtonStyle.SECONDARY,
             enabled = isSearchEnabled,
             isLoading = isLoading,
         )

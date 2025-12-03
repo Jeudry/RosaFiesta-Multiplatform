@@ -7,7 +7,7 @@ import com.plcoding.chat.data.lifecycle.AppLifecycleObserver
 import com.plcoding.chat.domain.models.ConnectionState
 import com.plcoding.core.data.networking.UrlConstants
 import com.plcoding.core.domain.auth.SessionStorage
-import com.plcoding.core.domain.logging.ChirpLogger
+import com.plcoding.core.domain.logging.RosaFiestaLogger
 import com.plcoding.core.domain.util.DataError
 import com.plcoding.core.domain.util.EmptyResult
 import com.plcoding.core.domain.util.Result
@@ -57,7 +57,7 @@ class KtorWebSocketConnector(
     private val connectionRetryHandler: ConnectionRetryHandler,
     private val appLifecycleObserver: AppLifecycleObserver,
     private val connectivityObserver: ConnectivityObserver,
-    private val logger: ChirpLogger
+    private val logger: RosaFiestaLogger
 ) {
     private val _connectionState = MutableStateFlow(ConnectionState.DISCONNECTED)
     val connectionState = _connectionState.asStateFlow()

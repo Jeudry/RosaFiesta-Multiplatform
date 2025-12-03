@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.plcoding.core.designsystem.components.brand.ChirpHorizontalDivider
+import com.plcoding.core.designsystem.components.brand.RosaFiestaHorizontalDivider
 
 @Composable
 fun ChatHeader(
@@ -32,6 +32,6 @@ fun ChatHeader(
         ) {
             content()
         }
-        ChirpHorizontalDivider()
+        RosaFiestaHorizontalDivider()
     }
 }

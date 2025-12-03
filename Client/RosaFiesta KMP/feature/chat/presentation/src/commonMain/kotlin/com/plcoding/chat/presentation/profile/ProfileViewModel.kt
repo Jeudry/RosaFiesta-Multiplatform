@@ -5,10 +5,10 @@ import androidx.compose.foundation.text.input.clearText
 import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.error_current_password_equal_to_new_one
-import chirp.feature.chat.presentation.generated.resources.error_current_password_incorrect
-import chirp.feature.chat.presentation.generated.resources.error_invalid_file_type
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.error_current_password_equal_to_new_one
+import rosafiesta.feature.chat.presentation.generated.resources.error_current_password_incorrect
+import rosafiesta.feature.chat.presentation.generated.resources.error_invalid_file_type
 import com.plcoding.chat.domain.participant.ChatParticipantRepository
 import com.plcoding.chat.domain.participant.ChatParticipantService
 import com.plcoding.core.domain.auth.AuthService

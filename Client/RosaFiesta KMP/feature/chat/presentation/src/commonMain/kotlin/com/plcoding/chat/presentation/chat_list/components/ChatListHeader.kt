@@ -13,23 +13,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import chirp.core.designsystem.generated.resources.log_out_icon
-import chirp.core.designsystem.generated.resources.logo_chirp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.logout
-import chirp.feature.chat.presentation.generated.resources.profile_settings
-import chirp.feature.chat.presentation.generated.resources.users_icon
+import rosafiesta.core.designsystem.generated.resources.log_out_icon
+import rosafiesta.core.designsystem.generated.resources.logo_rosafiesta
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.logout
+import rosafiesta.feature.chat.presentation.generated.resources.profile_settings
+import rosafiesta.feature.chat.presentation.generated.resources.users_icon
 import com.plcoding.chat.presentation.components.ChatHeader
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.components.avatar.ChirpAvatarPhoto
-import com.plcoding.core.designsystem.components.dropdown.ChirpDropDownMenu
+import com.plcoding.core.designsystem.components.avatar.RosaFiestaAvatarPhoto
+import com.plcoding.core.designsystem.components.dropdown.RosaFiestaDropDownMenu
 import com.plcoding.core.designsystem.components.dropdown.DropDownItem
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import chirp.core.designsystem.generated.resources.Res as DesignSystemRes
+import rosafiesta.core.designsystem.generated.resources.Res as DesignSystemRes
 
 @Composable
 fun ChatListHeader(
@@ -50,7 +50,7 @@ fun ChatListHeader(
             modifier = Modifier.fillMaxWidth()
         ) {
             Icon(
-                imageVector = vectorResource(DesignSystemRes.drawable.logo_chirp),
+                imageVector = vectorResource(DesignSystemRes.drawable.logo_rosafiesta),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.tertiary
             )
@@ -86,14 +86,14 @@ fun ProfileAvatarSection(
         modifier = modifier
     ) {
         if(localParticipant != null) {
-            ChirpAvatarPhoto(
+            RosaFiestaAvatarPhoto(
                 displayText = localParticipant.initials,
                 imageUrl = localParticipant.imageUrl,
                 onClick = onClick
             )
         }
 
-        ChirpDropDownMenu(
+        RosaFiestaDropDownMenu(
             isOpen = isMenuOpen,
             onDismiss = onDismissMenu,
             items = listOf(
@@ -117,7 +117,7 @@ fun ProfileAvatarSection(
 @Composable
 @Preview(showBackground = true)
 fun ChatListHeaderPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         Box(
             modifier = Modifier
                 .fillMaxSize()

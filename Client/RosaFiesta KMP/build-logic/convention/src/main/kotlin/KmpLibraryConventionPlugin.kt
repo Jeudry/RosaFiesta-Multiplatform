@@ -1,8 +1,8 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.plcoding.chirp.convention.configureKotlinAndroid
-import com.plcoding.chirp.convention.configureKotlinMultiplatform
-import com.plcoding.chirp.convention.libs
-import com.plcoding.chirp.convention.pathToResourcePrefix
+import com.plcoding.rosafiesta.convention.configureKotlinAndroid
+import com.plcoding.rosafiesta.convention.configureKotlinMultiplatform
+import com.plcoding.rosafiesta.convention.libs
+import com.plcoding.rosafiesta.convention.pathToResourcePrefix
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

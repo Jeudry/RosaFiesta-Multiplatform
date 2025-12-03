@@ -7,8 +7,8 @@ import androidx.room.RoomDatabase
 actual class DatabaseFactory(
     private val context: Context
 ) {
-    actual fun create(): RoomDatabase.Builder<ChirpChatDatabase> {
-        val dbFile = context.applicationContext.getDatabasePath(ChirpChatDatabase.DB_NAME)
+    actual fun create(): RoomDatabase.Builder<RosaFiestaChatDatabase> {
+        val dbFile = context.applicationContext.getDatabasePath(RosaFiestaChatDatabase.DB_NAME)
 
         return Room.databaseBuilder(
             context.applicationContext,

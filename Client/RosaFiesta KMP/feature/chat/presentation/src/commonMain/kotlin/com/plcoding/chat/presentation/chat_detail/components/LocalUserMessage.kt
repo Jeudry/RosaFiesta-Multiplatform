@@ -13,16 +13,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.delete_for_everyone
-import chirp.feature.chat.presentation.generated.resources.reload_icon
-import chirp.feature.chat.presentation.generated.resources.retry
-import chirp.feature.chat.presentation.generated.resources.you
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.delete_for_everyone
+import rosafiesta.feature.chat.presentation.generated.resources.reload_icon
+import rosafiesta.feature.chat.presentation.generated.resources.retry
+import rosafiesta.feature.chat.presentation.generated.resources.you
 import com.plcoding.chat.domain.models.ChatMessageDeliveryStatus
 import com.plcoding.chat.presentation.model.MessageUi
-import com.plcoding.core.designsystem.components.chat.ChirpChatBubble
+import com.plcoding.core.designsystem.components.chat.RosaFiestaChatBubble
 import com.plcoding.core.designsystem.components.chat.TrianglePosition
-import com.plcoding.core.designsystem.components.dropdown.ChirpDropDownMenu
+import com.plcoding.core.designsystem.components.dropdown.RosaFiestaDropDownMenu
 import com.plcoding.core.designsystem.components.dropdown.DropDownItem
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
@@ -45,7 +45,7 @@ fun LocalUserMessage(
         horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.End)
     ) {
         Box {
-            ChirpChatBubble(
+            RosaFiestaChatBubble(
                 messageContent = message.content,
                 sender = stringResource(Res.string.you),
                 formattedDateTime = message.formattedSentTime.asString(),
@@ -60,7 +60,7 @@ fun LocalUserMessage(
                 }
             )
 
-            ChirpDropDownMenu(
+            RosaFiestaDropDownMenu(
                 isOpen = message.id == messageWithOpenMenu?.id,
                 onDismiss = onDismissMessageMenu,
                 items = listOf(

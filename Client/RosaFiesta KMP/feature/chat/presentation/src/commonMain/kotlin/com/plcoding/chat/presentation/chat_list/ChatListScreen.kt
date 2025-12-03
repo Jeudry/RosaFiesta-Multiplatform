@@ -27,21 +27,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.cancel
-import chirp.feature.chat.presentation.generated.resources.create_chat
-import chirp.feature.chat.presentation.generated.resources.do_you_want_to_logout
-import chirp.feature.chat.presentation.generated.resources.do_you_want_to_logout_desc
-import chirp.feature.chat.presentation.generated.resources.logout
-import chirp.feature.chat.presentation.generated.resources.no_chats
-import chirp.feature.chat.presentation.generated.resources.no_chats_subtitle
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.cancel
+import rosafiesta.feature.chat.presentation.generated.resources.create_chat
+import rosafiesta.feature.chat.presentation.generated.resources.do_you_want_to_logout
+import rosafiesta.feature.chat.presentation.generated.resources.do_you_want_to_logout_desc
+import rosafiesta.feature.chat.presentation.generated.resources.logout
+import rosafiesta.feature.chat.presentation.generated.resources.no_chats
+import rosafiesta.feature.chat.presentation.generated.resources.no_chats_subtitle
 import com.plcoding.chat.presentation.chat_list.components.ChatListHeader
 import com.plcoding.chat.presentation.chat_list.components.ChatListItemUi
 import com.plcoding.chat.presentation.components.EmptySection
-import com.plcoding.core.designsystem.components.brand.ChirpHorizontalDivider
-import com.plcoding.core.designsystem.components.buttons.ChirpFloatingActionButton
+import com.plcoding.core.designsystem.components.brand.RosaFiestaHorizontalDivider
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaFloatingActionButton
 import com.plcoding.core.designsystem.components.dialogs.DestructiveConfirmationDialog
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.presentation.permissions.Permission
 import com.plcoding.core.presentation.permissions.rememberPermissionController
@@ -115,7 +115,7 @@ fun ChatListScreen(
         contentWindowInsets = WindowInsets.safeDrawing,
         snackbarHost = { SnackbarHost(snackbarHostState) },
         floatingActionButton = {
-            ChirpFloatingActionButton(
+            RosaFiestaFloatingActionButton(
                 onClick = {
                     onAction(ChatListAction.OnCreateChatClick)
                 }
@@ -187,7 +187,7 @@ fun ChatListScreen(
                                         onAction(ChatListAction.OnSelectChat(chatUi.id))
                                     }
                             )
-                            ChirpHorizontalDivider()
+                            RosaFiestaHorizontalDivider()
                         }
                     }
                 }
@@ -217,7 +217,7 @@ fun ChatListScreen(
 @Preview
 @Composable
 private fun Preview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         ChatListScreen(
             state = ChatListState(),
             onAction = {},

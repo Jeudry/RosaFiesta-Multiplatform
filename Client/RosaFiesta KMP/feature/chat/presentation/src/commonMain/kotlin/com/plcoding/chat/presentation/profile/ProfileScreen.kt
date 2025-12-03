@@ -31,37 +31,37 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.cancel
-import chirp.feature.chat.presentation.generated.resources.contact_chirp_support_change_email
-import chirp.feature.chat.presentation.generated.resources.current_password
-import chirp.feature.chat.presentation.generated.resources.delete
-import chirp.feature.chat.presentation.generated.resources.delete_profile_picture
-import chirp.feature.chat.presentation.generated.resources.delete_profile_picture_desc
-import chirp.feature.chat.presentation.generated.resources.email
-import chirp.feature.chat.presentation.generated.resources.new_password
-import chirp.feature.chat.presentation.generated.resources.password
-import chirp.feature.chat.presentation.generated.resources.password_change_successful
-import chirp.feature.chat.presentation.generated.resources.password_hint
-import chirp.feature.chat.presentation.generated.resources.profile_image
-import chirp.feature.chat.presentation.generated.resources.save
-import chirp.feature.chat.presentation.generated.resources.upload_icon
-import chirp.feature.chat.presentation.generated.resources.upload_image
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.cancel
+import rosafiesta.feature.chat.presentation.generated.resources.contact_rosafiesta_support_change_email
+import rosafiesta.feature.chat.presentation.generated.resources.current_password
+import rosafiesta.feature.chat.presentation.generated.resources.delete
+import rosafiesta.feature.chat.presentation.generated.resources.delete_profile_picture
+import rosafiesta.feature.chat.presentation.generated.resources.delete_profile_picture_desc
+import rosafiesta.feature.chat.presentation.generated.resources.email
+import rosafiesta.feature.chat.presentation.generated.resources.new_password
+import rosafiesta.feature.chat.presentation.generated.resources.password
+import rosafiesta.feature.chat.presentation.generated.resources.password_change_successful
+import rosafiesta.feature.chat.presentation.generated.resources.password_hint
+import rosafiesta.feature.chat.presentation.generated.resources.profile_image
+import rosafiesta.feature.chat.presentation.generated.resources.save
+import rosafiesta.feature.chat.presentation.generated.resources.upload_icon
+import rosafiesta.feature.chat.presentation.generated.resources.upload_image
 import com.plcoding.chat.presentation.profile.components.DragAndDropOverlay
 import com.plcoding.chat.presentation.profile.components.ProfileHeaderSection
 import com.plcoding.chat.presentation.profile.components.ProfileSectionLayout
 import com.plcoding.chat.presentation.profile.mediapicker.rememberDragAndDropTarget
 import com.plcoding.chat.presentation.profile.mediapicker.rememberImagePickerLauncher
 import com.plcoding.core.designsystem.components.avatar.AvatarSize
-import com.plcoding.core.designsystem.components.avatar.ChirpAvatarPhoto
-import com.plcoding.core.designsystem.components.brand.ChirpHorizontalDivider
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.components.dialogs.ChirpAdaptiveDialogSheetLayout
+import com.plcoding.core.designsystem.components.avatar.RosaFiestaAvatarPhoto
+import com.plcoding.core.designsystem.components.brand.RosaFiestaHorizontalDivider
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.components.dialogs.RosaFiestaAdaptiveDialogSheetLayout
 import com.plcoding.core.designsystem.components.dialogs.DestructiveConfirmationDialog
-import com.plcoding.core.designsystem.components.textfields.ChirpPasswordTextField
-import com.plcoding.core.designsystem.components.textfields.ChirpTextField
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaPasswordTextField
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaTextField
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.presentation.util.DeviceConfiguration
 import com.plcoding.core.presentation.util.clearFocusOnTap
@@ -85,7 +85,7 @@ fun ProfileRoot(
         ))
     }
 
-    ChirpAdaptiveDialogSheetLayout(
+    RosaFiestaAdaptiveDialogSheetLayout(
         onDismiss = onDismiss
     ) {
         ProfileScreen(
@@ -150,12 +150,12 @@ fun ProfileScreen(
                     horizontal = 20.dp
                 )
         )
-        ChirpHorizontalDivider()
+        RosaFiestaHorizontalDivider()
         ProfileSectionLayout(
             headerText = stringResource(Res.string.profile_image)
         ) {
             Row {
-                ChirpAvatarPhoto(
+                RosaFiestaAvatarPhoto(
                     displayText = state.userInitials,
                     size = AvatarSize.LARGE,
                     imageUrl = state.profilePictureUrl,
@@ -170,12 +170,12 @@ fun ProfileScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = stringResource(Res.string.upload_image),
                         onClick = {
                             onAction(ProfileAction.OnUploadPictureClick)
                         },
-                        style = ChirpButtonStyle.SECONDARY,
+                        style = RosaFiestaButtonStyle.SECONDARY,
                         enabled = !state.isUploadingImage && !state.isDeletingImage,
                         isLoading = state.isUploadingImage,
                         leadingIcon = {
@@ -185,12 +185,12 @@ fun ProfileScreen(
                             )
                         }
                     )
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = stringResource(Res.string.delete),
                         onClick = {
                             onAction(ProfileAction.OnDeletePictureClick)
                         },
-                        style = ChirpButtonStyle.DESTRUCTIVE_SECONDARY,
+                        style = RosaFiestaButtonStyle.DESTRUCTIVE_SECONDARY,
                         enabled = !state.isUploadingImage
                                 && !state.isDeletingImage
                                 && state.profilePictureUrl != null,
@@ -213,21 +213,21 @@ fun ProfileScreen(
                 )
             }
         }
-        ChirpHorizontalDivider()
+        RosaFiestaHorizontalDivider()
         ProfileSectionLayout(
             headerText = stringResource(Res.string.email)
         ) {
-            ChirpTextField(
+            RosaFiestaTextField(
                 state = state.emailTextState,
                 enabled = false,
-                supportingText = stringResource(Res.string.contact_chirp_support_change_email)
+                supportingText = stringResource(Res.string.contact_rosafiesta_support_change_email)
             )
         }
-        ChirpHorizontalDivider()
+        RosaFiestaHorizontalDivider()
         ProfileSectionLayout(
             headerText = stringResource(Res.string.password)
         ) {
-            ChirpPasswordTextField(
+            RosaFiestaPasswordTextField(
                 state = state.currentPasswordTextState,
                 isPasswordVisible = state.isCurrentPasswordVisible,
                 onToggleVisibilityClick = {
@@ -236,7 +236,7 @@ fun ProfileScreen(
                 placeholder = stringResource(Res.string.current_password),
                 isError = state.newPasswordError != null,
             )
-            ChirpPasswordTextField(
+            RosaFiestaPasswordTextField(
                 state = state.newPasswordTextState,
                 isPasswordVisible = state.isNewPasswordVisible,
                 onToggleVisibilityClick = {
@@ -261,14 +261,14 @@ fun ProfileScreen(
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.End)
             ) {
-                ChirpButton(
+                RosaFiestaButton(
                     text = stringResource(Res.string.cancel),
-                    style = ChirpButtonStyle.SECONDARY,
+                    style = RosaFiestaButtonStyle.SECONDARY,
                     onClick = {
                         onAction(ProfileAction.OnDismiss)
                     }
                 )
-                ChirpButton(
+                RosaFiestaButton(
                     text = stringResource(Res.string.save),
                     onClick = {
                         onAction(ProfileAction.OnChangePasswordClick)
@@ -313,7 +313,7 @@ fun ProfileScreen(
 @Preview
 @Composable
 private fun Preview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         ProfileScreen(
             state = ProfileState(),
             onAction = {}

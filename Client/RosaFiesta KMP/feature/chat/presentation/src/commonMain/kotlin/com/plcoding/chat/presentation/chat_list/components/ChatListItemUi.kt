@@ -24,16 +24,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.group_chat
-import chirp.feature.chat.presentation.generated.resources.you
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.group_chat
+import rosafiesta.feature.chat.presentation.generated.resources.you
 import com.plcoding.chat.domain.models.ChatMessage
 import com.plcoding.chat.domain.models.ChatMessageDeliveryStatus
 import com.plcoding.chat.presentation.components.ChatItemHeaderRow
 import com.plcoding.chat.presentation.model.ChatUi
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.components.avatar.ChirpStackedAvatars
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.components.avatar.RosaFiestaStackedAvatars
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.designsystem.theme.titleXSmall
 import org.jetbrains.compose.resources.stringResource
@@ -108,7 +108,7 @@ fun ChatListItemUi(
 @Composable
 @Preview
 fun ChatListItemUiPreview() {
-    ChirpTheme(darkTheme = true) {
+    RosaFiestaTheme(darkTheme = true) {
         ChatListItemUi(
             isSelected = true,
             modifier = Modifier

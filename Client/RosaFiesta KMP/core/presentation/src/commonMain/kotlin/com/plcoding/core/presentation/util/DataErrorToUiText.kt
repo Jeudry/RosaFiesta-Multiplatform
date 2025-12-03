@@ -1,21 +1,21 @@
 package com.plcoding.core.presentation.util
 
-import chirp.core.presentation.generated.resources.Res
-import chirp.core.presentation.generated.resources.error_bad_request
-import chirp.core.presentation.generated.resources.error_conflict
-import chirp.core.presentation.generated.resources.error_disk_full
-import chirp.core.presentation.generated.resources.error_forbidden
-import chirp.core.presentation.generated.resources.error_no_internet
-import chirp.core.presentation.generated.resources.error_not_found
-import chirp.core.presentation.generated.resources.error_payload_too_large
-import chirp.core.presentation.generated.resources.error_request_timeout
-import chirp.core.presentation.generated.resources.error_serialization
-import chirp.core.presentation.generated.resources.error_server
-import chirp.core.presentation.generated.resources.error_service_unavailable
-import chirp.core.presentation.generated.resources.error_too_many_requests
-import chirp.core.presentation.generated.resources.error_unable_to_send_message
-import chirp.core.presentation.generated.resources.error_unauthorized
-import chirp.core.presentation.generated.resources.error_unknown
+import rosafiesta.core.presentation.generated.resources.Res
+import rosafiesta.core.presentation.generated.resources.error_bad_request
+import rosafiesta.core.presentation.generated.resources.error_conflict
+import rosafiesta.core.presentation.generated.resources.error_disk_full
+import rosafiesta.core.presentation.generated.resources.error_forbidden
+import rosafiesta.core.presentation.generated.resources.error_no_internet
+import rosafiesta.core.presentation.generated.resources.error_not_found
+import rosafiesta.core.presentation.generated.resources.error_payload_too_large
+import rosafiesta.core.presentation.generated.resources.error_request_timeout
+import rosafiesta.core.presentation.generated.resources.error_serialization
+import rosafiesta.core.presentation.generated.resources.error_server
+import rosafiesta.core.presentation.generated.resources.error_service_unavailable
+import rosafiesta.core.presentation.generated.resources.error_too_many_requests
+import rosafiesta.core.presentation.generated.resources.error_unable_to_send_message
+import rosafiesta.core.presentation.generated.resources.error_unauthorized
+import rosafiesta.core.presentation.generated.resources.error_unknown
 import com.plcoding.core.domain.util.DataError
 
 fun DataError.toUiText(): UiText {

@@ -3,7 +3,7 @@ package com.plcoding.chat.data.chat
 import com.plcoding.chat.data.mappers.toDomain
 import com.plcoding.chat.data.mappers.toEntity
 import com.plcoding.chat.data.mappers.toLastMessageView
-import com.plcoding.chat.database.ChirpChatDatabase
+import com.plcoding.chat.database.RosaFiestaChatDatabase
 import com.plcoding.chat.database.entities.ChatInfoEntity
 import com.plcoding.chat.database.entities.ChatParticipantEntity
 import com.plcoding.chat.database.entities.ChatWithParticipants
@@ -27,7 +27,7 @@ import kotlinx.coroutines.supervisorScope
 
 class OfflineFirstChatRepository(
     private val chatService: ChatService,
-    private val db: ChirpChatDatabase,
+    private val db: RosaFiestaChatDatabase,
 ): ChatRepository {
 
     override fun getChats(): Flow<List<Chat>> {

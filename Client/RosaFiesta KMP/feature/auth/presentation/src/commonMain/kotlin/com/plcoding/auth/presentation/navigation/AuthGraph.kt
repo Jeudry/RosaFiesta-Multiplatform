@@ -64,10 +64,10 @@ fun NavGraphBuilder.authGraph(
         composable<AuthGraphRoutes.EmailVerification>(
             deepLinks = listOf(
                 navDeepLink {
-                    this.uriPattern = "https://chirp.pl-coding.com/api/auth/verify?token={token}"
+                    this.uriPattern = "https://rosafiesta.pl-coding.com/api/auth/verify?token={token}"
                 },
                 navDeepLink {
-                    this.uriPattern = "chirp://chirp.pl-coding.com/api/auth/verify?token={token}"
+                    this.uriPattern = "rosafiesta://rosafiesta.pl-coding.com/api/auth/verify?token={token}"
                 },
             )
         ) {
@@ -94,10 +94,10 @@ fun NavGraphBuilder.authGraph(
         composable<AuthGraphRoutes.ResetPassword>(
             deepLinks = listOf(
                 navDeepLink {
-                    this.uriPattern = "https://chirp.pl-coding.com/api/auth/reset-password?token={token}"
+                    this.uriPattern = "https://rosafiesta.pl-coding.com/api/auth/reset-password?token={token}"
                 },
                 navDeepLink {
-                    this.uriPattern = "chirp://chirp.pl-coding.com/api/auth/reset-password?token={token}"
+                    this.uriPattern = "rosafiesta://rosafiesta.pl-coding.com/api/auth/reset-password?token={token}"
                 },
             )
         ) {

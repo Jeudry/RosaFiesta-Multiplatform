@@ -1,4 +1,4 @@
-package com.plcoding.chirp
+package com.plcoding.rosafiesta
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

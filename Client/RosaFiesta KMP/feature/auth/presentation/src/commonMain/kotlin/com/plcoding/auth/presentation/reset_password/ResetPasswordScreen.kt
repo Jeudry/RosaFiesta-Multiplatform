@@ -11,19 +11,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.auth.presentation.generated.resources.Res
-import chirp.feature.auth.presentation.generated.resources.password
-import chirp.feature.auth.presentation.generated.resources.password_hint
-import chirp.feature.auth.presentation.generated.resources.reset_password_successfully
-import chirp.feature.auth.presentation.generated.resources.set_new_password
-import chirp.feature.auth.presentation.generated.resources.submit
-import com.plcoding.core.designsystem.components.brand.ChirpBrandLogo
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.layouts.ChirpAdaptiveFormLayout
-import com.plcoding.core.designsystem.components.layouts.ChirpSnackbarScaffold
-import com.plcoding.core.designsystem.components.textfields.ChirpPasswordTextField
-import com.plcoding.core.designsystem.components.textfields.ChirpTextField
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import rosafiesta.feature.auth.presentation.generated.resources.Res
+import rosafiesta.feature.auth.presentation.generated.resources.password
+import rosafiesta.feature.auth.presentation.generated.resources.password_hint
+import rosafiesta.feature.auth.presentation.generated.resources.reset_password_successfully
+import rosafiesta.feature.auth.presentation.generated.resources.set_new_password
+import rosafiesta.feature.auth.presentation.generated.resources.submit
+import com.plcoding.core.designsystem.components.brand.RosaFiestaBrandLogo
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaAdaptiveFormLayout
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaSnackbarScaffold
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaPasswordTextField
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaTextField
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -46,15 +46,15 @@ fun ResetPasswordScreen(
     state: ResetPasswordState,
     onAction: (ResetPasswordAction) -> Unit,
 ) {
-    ChirpSnackbarScaffold {
-        ChirpAdaptiveFormLayout(
+    RosaFiestaSnackbarScaffold {
+        RosaFiestaAdaptiveFormLayout(
             headerText = stringResource(Res.string.set_new_password),
             errorText = state.errorText?.asString(),
             logo = {
-                ChirpBrandLogo()
+                RosaFiestaBrandLogo()
             }
         ) {
-            ChirpPasswordTextField(
+            RosaFiestaPasswordTextField(
                 state = state.passwordTextState,
                 modifier = Modifier
                     .fillMaxWidth(),
@@ -67,7 +67,7 @@ fun ResetPasswordScreen(
                 }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.submit),
                 onClick = {
                     onAction(ResetPasswordAction.OnSubmitClick)
@@ -94,7 +94,7 @@ fun ResetPasswordScreen(
 @Preview
 @Composable
 private fun Preview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         ResetPasswordScreen(
             state = ResetPasswordState(),
             onAction = {}

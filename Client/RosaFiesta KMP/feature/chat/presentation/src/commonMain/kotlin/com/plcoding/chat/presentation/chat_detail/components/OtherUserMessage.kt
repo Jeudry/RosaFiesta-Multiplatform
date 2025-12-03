@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.plcoding.chat.presentation.model.MessageUi
-import com.plcoding.core.designsystem.components.avatar.ChirpAvatarPhoto
-import com.plcoding.core.designsystem.components.chat.ChirpChatBubble
+import com.plcoding.core.designsystem.components.avatar.RosaFiestaAvatarPhoto
+import com.plcoding.core.designsystem.components.chat.RosaFiestaChatBubble
 import com.plcoding.core.designsystem.components.chat.TrianglePosition
 
 @Composable
@@ -25,11 +25,11 @@ fun OtherUserMessage(
         verticalAlignment = Alignment.Bottom,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        ChirpAvatarPhoto(
+        RosaFiestaAvatarPhoto(
             displayText = message.sender.initials,
             imageUrl = message.sender.imageUrl
         )
-        ChirpChatBubble(
+        RosaFiestaChatBubble(
             messageContent = message.content,
             sender = message.sender.username,
             trianglePosition = TrianglePosition.LEFT,

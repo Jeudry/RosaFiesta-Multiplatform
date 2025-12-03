@@ -23,11 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import chirp.core.designsystem.generated.resources.Res
-import chirp.core.designsystem.generated.resources.dismiss_dialog
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import rosafiesta.core.designsystem.generated.resources.Res
+import rosafiesta.core.designsystem.generated.resources.dismiss_dialog
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -83,15 +83,15 @@ fun DestructiveConfirmationDialog(
                     horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.End),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = cancelButtonText,
                         onClick = onCancelClick,
-                        style = ChirpButtonStyle.SECONDARY
+                        style = RosaFiestaButtonStyle.SECONDARY
                     )
-                    ChirpButton(
+                    RosaFiestaButton(
                         text = confirmButtonText,
                         onClick = onConfirmClick,
-                        style = ChirpButtonStyle.DESTRUCTIVE_PRIMARY
+                        style = RosaFiestaButtonStyle.DESTRUCTIVE_PRIMARY
                     )
                 }
             }
@@ -113,7 +113,7 @@ fun DestructiveConfirmationDialog(
 @Composable
 @Preview
 fun DestructiveConfirmationDialogPreview() {
-    ChirpTheme(darkTheme = true) {
+    RosaFiestaTheme(darkTheme = true) {
         DestructiveConfirmationDialog(
             title = "Delete profile picture?",
             description = "This will permanently delete your profile picture. This cannot be undone.",

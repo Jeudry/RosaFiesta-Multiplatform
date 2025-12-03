@@ -1,5 +1,5 @@
 import androidx.room.gradle.RoomExtension
-import com.plcoding.chirp.convention.libs
+import com.plcoding.rosafiesta.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

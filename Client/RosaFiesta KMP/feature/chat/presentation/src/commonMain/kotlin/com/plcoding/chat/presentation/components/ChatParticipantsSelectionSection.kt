@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.components.avatar.ChirpAvatarPhoto
-import com.plcoding.core.designsystem.components.brand.ChirpHorizontalDivider
+import com.plcoding.core.designsystem.components.avatar.RosaFiestaAvatarPhoto
+import com.plcoding.core.designsystem.components.brand.RosaFiestaHorizontalDivider
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.designsystem.theme.titleXSmall
 import com.plcoding.core.presentation.util.DeviceConfiguration
@@ -67,7 +67,7 @@ fun ColumnScope.ChatParticipantsSelectionSection(
 
             if(existingParticipants.isNotEmpty()) {
                 item {
-                    ChirpHorizontalDivider()
+                    RosaFiestaHorizontalDivider()
                 }
             }
 
@@ -110,7 +110,7 @@ fun ChatParticipantListItem(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        ChirpAvatarPhoto(
+        RosaFiestaAvatarPhoto(
             displayText = participantUi.initials,
             imageUrl = participantUi.imageUrl
         )

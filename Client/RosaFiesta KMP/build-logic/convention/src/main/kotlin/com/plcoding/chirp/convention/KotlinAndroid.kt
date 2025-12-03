@@ -1,4 +1,4 @@
-package com.plcoding.chirp.convention
+package com.plcoding.rosafiesta.convention
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion

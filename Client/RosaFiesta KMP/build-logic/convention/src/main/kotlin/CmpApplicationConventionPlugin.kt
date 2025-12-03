@@ -1,8 +1,8 @@
-import com.plcoding.chirp.convention.applyHierarchyTemplate
-import com.plcoding.chirp.convention.configureAndroidTarget
-import com.plcoding.chirp.convention.configureDesktopTarget
-import com.plcoding.chirp.convention.configureIosTargets
-import com.plcoding.chirp.convention.libs
+import com.plcoding.rosafiesta.convention.applyHierarchyTemplate
+import com.plcoding.rosafiesta.convention.configureAndroidTarget
+import com.plcoding.rosafiesta.convention.configureDesktopTarget
+import com.plcoding.rosafiesta.convention.configureIosTargets
+import com.plcoding.rosafiesta.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

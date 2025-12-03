@@ -7,7 +7,7 @@ import com.plcoding.chat.data.mappers.toEntity
 import com.plcoding.chat.data.mappers.toNewMessage
 import com.plcoding.chat.data.mappers.toWebSocketDto
 import com.plcoding.chat.data.network.KtorWebSocketConnector
-import com.plcoding.chat.database.ChirpChatDatabase
+import com.plcoding.chat.database.RosaFiestaChatDatabase
 import com.plcoding.chat.domain.message.ChatMessageService
 import com.plcoding.chat.domain.message.MessageRepository
 import com.plcoding.chat.domain.models.ChatMessage
@@ -30,7 +30,7 @@ import kotlinx.serialization.json.Json
 import kotlin.time.Clock
 
 class OfflineFirstMessageRepository(
-    private val database: ChirpChatDatabase,
+    private val database: RosaFiestaChatDatabase,
     private val chatMessageService: ChatMessageService,
     private val sessionStorage: SessionStorage,
     private val json: Json,

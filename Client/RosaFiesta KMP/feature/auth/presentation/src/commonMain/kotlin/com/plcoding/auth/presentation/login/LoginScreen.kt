@@ -15,22 +15,22 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import chirp.feature.auth.presentation.generated.resources.Res
-import chirp.feature.auth.presentation.generated.resources.create_account
-import chirp.feature.auth.presentation.generated.resources.email
-import chirp.feature.auth.presentation.generated.resources.email_placeholder
-import chirp.feature.auth.presentation.generated.resources.forgot_password
-import chirp.feature.auth.presentation.generated.resources.login
-import chirp.feature.auth.presentation.generated.resources.password
-import chirp.feature.auth.presentation.generated.resources.welcome_back
-import com.plcoding.core.designsystem.components.brand.ChirpBrandLogo
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.components.layouts.ChirpAdaptiveFormLayout
-import com.plcoding.core.designsystem.components.layouts.ChirpSnackbarScaffold
-import com.plcoding.core.designsystem.components.textfields.ChirpPasswordTextField
-import com.plcoding.core.designsystem.components.textfields.ChirpTextField
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import rosafiesta.feature.auth.presentation.generated.resources.Res
+import rosafiesta.feature.auth.presentation.generated.resources.create_account
+import rosafiesta.feature.auth.presentation.generated.resources.email
+import rosafiesta.feature.auth.presentation.generated.resources.email_placeholder
+import rosafiesta.feature.auth.presentation.generated.resources.forgot_password
+import rosafiesta.feature.auth.presentation.generated.resources.login
+import rosafiesta.feature.auth.presentation.generated.resources.password
+import rosafiesta.feature.auth.presentation.generated.resources.welcome_back
+import com.plcoding.core.designsystem.components.brand.RosaFiestaBrandLogo
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaAdaptiveFormLayout
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaSnackbarScaffold
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaPasswordTextField
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaTextField
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -69,17 +69,17 @@ fun LoginScreen(
     state: LoginState,
     onAction: (LoginAction) -> Unit,
 ) {
-    ChirpSnackbarScaffold {
-        ChirpAdaptiveFormLayout(
+    RosaFiestaSnackbarScaffold {
+        RosaFiestaAdaptiveFormLayout(
             headerText = stringResource(Res.string.welcome_back),
             errorText = state.error?.asString(),
             logo = {
-                ChirpBrandLogo()
+                RosaFiestaBrandLogo()
             },
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            ChirpTextField(
+            RosaFiestaTextField(
                 state = state.emailTextFieldState,
                 placeholder = stringResource(Res.string.email_placeholder),
                 keyboardType = KeyboardType.Email,
@@ -89,7 +89,7 @@ fun LoginScreen(
                 title = stringResource(Res.string.email)
             )
             Spacer(modifier = Modifier.height(16.dp))
-            ChirpPasswordTextField(
+            RosaFiestaPasswordTextField(
                 state = state.passwordTextFieldState,
                 placeholder = stringResource(Res.string.password),
                 isPasswordVisible = state.isPasswordVisible,
@@ -113,7 +113,7 @@ fun LoginScreen(
             )
             Spacer(modifier = Modifier.height(24.dp))
 
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.login),
                 onClick = {
                     onAction(LoginAction.OnLoginClick)
@@ -124,12 +124,12 @@ fun LoginScreen(
                     .fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(8.dp))
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.create_account),
                 onClick = {
                     onAction(LoginAction.OnSignUpClick)
                 },
-                style = ChirpButtonStyle.SECONDARY,
+                style = RosaFiestaButtonStyle.SECONDARY,
                 modifier = Modifier
                     .fillMaxWidth()
             )
@@ -140,7 +140,7 @@ fun LoginScreen(
 @Preview
 @Composable
 private fun LightThemePreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         LoginScreen(
             state = LoginState(),
             onAction = {}
@@ -151,7 +151,7 @@ private fun LightThemePreview() {
 @Preview
 @Composable
 private fun DarkThemePreview() {
-    ChirpTheme(darkTheme = true) {
+    RosaFiestaTheme(darkTheme = true) {
         LoginScreen(
             state = LoginState(),
             onAction = {}

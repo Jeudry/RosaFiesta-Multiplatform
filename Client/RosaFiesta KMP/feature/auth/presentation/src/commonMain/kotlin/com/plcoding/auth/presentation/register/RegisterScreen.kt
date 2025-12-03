@@ -12,25 +12,25 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import chirp.feature.auth.presentation.generated.resources.Res
-import chirp.feature.auth.presentation.generated.resources.email
-import chirp.feature.auth.presentation.generated.resources.email_placeholder
-import chirp.feature.auth.presentation.generated.resources.login
-import chirp.feature.auth.presentation.generated.resources.password
-import chirp.feature.auth.presentation.generated.resources.password_hint
-import chirp.feature.auth.presentation.generated.resources.register
-import chirp.feature.auth.presentation.generated.resources.username
-import chirp.feature.auth.presentation.generated.resources.username_hint
-import chirp.feature.auth.presentation.generated.resources.username_placeholder
-import chirp.feature.auth.presentation.generated.resources.welcome_to_chirp
-import com.plcoding.core.designsystem.components.brand.ChirpBrandLogo
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.buttons.ChirpButtonStyle
-import com.plcoding.core.designsystem.components.layouts.ChirpAdaptiveFormLayout
-import com.plcoding.core.designsystem.components.layouts.ChirpSnackbarScaffold
-import com.plcoding.core.designsystem.components.textfields.ChirpPasswordTextField
-import com.plcoding.core.designsystem.components.textfields.ChirpTextField
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import rosafiesta.feature.auth.presentation.generated.resources.Res
+import rosafiesta.feature.auth.presentation.generated.resources.email
+import rosafiesta.feature.auth.presentation.generated.resources.email_placeholder
+import rosafiesta.feature.auth.presentation.generated.resources.login
+import rosafiesta.feature.auth.presentation.generated.resources.password
+import rosafiesta.feature.auth.presentation.generated.resources.password_hint
+import rosafiesta.feature.auth.presentation.generated.resources.register
+import rosafiesta.feature.auth.presentation.generated.resources.username
+import rosafiesta.feature.auth.presentation.generated.resources.username_hint
+import rosafiesta.feature.auth.presentation.generated.resources.username_placeholder
+import rosafiesta.feature.auth.presentation.generated.resources.welcome_to_rosafiesta
+import com.plcoding.core.designsystem.components.brand.RosaFiestaBrandLogo
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButtonStyle
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaAdaptiveFormLayout
+import com.plcoding.core.designsystem.components.layouts.RosaFiestaSnackbarScaffold
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaPasswordTextField
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaTextField
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -72,15 +72,15 @@ fun RegisterScreen(
     onAction: (RegisterAction) -> Unit,
     snackbarHostState: SnackbarHostState
 ) {
-    ChirpSnackbarScaffold(
+    RosaFiestaSnackbarScaffold(
         snackbarHostState = snackbarHostState
     ) {
-        ChirpAdaptiveFormLayout(
-            headerText = stringResource(Res.string.welcome_to_chirp),
+        RosaFiestaAdaptiveFormLayout(
+            headerText = stringResource(Res.string.welcome_to_rosafiesta),
             errorText = state.registrationError?.asString(),
-            logo = { ChirpBrandLogo() }
+            logo = { RosaFiestaBrandLogo() }
         ) {
-            ChirpTextField(
+            RosaFiestaTextField(
                 state = state.usernameTextState,
                 placeholder = stringResource(Res.string.username_placeholder),
                 title = stringResource(Res.string.username),
@@ -92,7 +92,7 @@ fun RegisterScreen(
                 }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            ChirpTextField(
+            RosaFiestaTextField(
                 state = state.emailTextState,
                 placeholder = stringResource(Res.string.email_placeholder),
                 title = stringResource(Res.string.email),
@@ -104,7 +104,7 @@ fun RegisterScreen(
                 keyboardType = KeyboardType.Email
             )
             Spacer(modifier = Modifier.height(16.dp))
-            ChirpPasswordTextField(
+            RosaFiestaPasswordTextField(
                 state = state.passwordTextState,
                 placeholder = stringResource(Res.string.password),
                 title = stringResource(Res.string.password),
@@ -121,7 +121,7 @@ fun RegisterScreen(
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.register),
                 onClick = {
                     onAction(RegisterAction.OnRegisterClick)
@@ -132,12 +132,12 @@ fun RegisterScreen(
                     .fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(8.dp))
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.login),
                 onClick = {
                     onAction(RegisterAction.OnLoginClick)
                 },
-                style = ChirpButtonStyle.SECONDARY,
+                style = RosaFiestaButtonStyle.SECONDARY,
                 modifier = Modifier
                     .fillMaxWidth()
             )
@@ -148,7 +148,7 @@ fun RegisterScreen(
 @Preview
 @Composable
 private fun Preview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         RegisterScreen(
             state = RegisterState(),
             onAction = {},

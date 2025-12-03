@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
-package com.plcoding.chirp.convention
+package com.plcoding.rosafiesta.convention
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension

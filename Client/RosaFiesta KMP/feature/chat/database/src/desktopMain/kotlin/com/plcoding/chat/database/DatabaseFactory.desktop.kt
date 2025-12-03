@@ -6,14 +6,14 @@ import com.plcoding.core.data.util.appDataDirectory
 import java.io.File
 
 actual class DatabaseFactory {
-    actual fun create(): RoomDatabase.Builder<ChirpChatDatabase> {
+    actual fun create(): RoomDatabase.Builder<RosaFiestaChatDatabase> {
         val directory = appDataDirectory
 
         if(!directory.exists()) {
             directory.mkdirs()
         }
 
-        val dbFile = File(directory, ChirpChatDatabase.DB_NAME)
+        val dbFile = File(directory, RosaFiestaChatDatabase.DB_NAME)
         return Room.databaseBuilder(dbFile.absolutePath)
     }
 }

@@ -16,31 +16,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import chirp.core.designsystem.generated.resources.arrow_left_icon
-import chirp.core.designsystem.generated.resources.dots_icon
-import chirp.core.designsystem.generated.resources.log_out_icon
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.chat_members
-import chirp.feature.chat.presentation.generated.resources.go_back
-import chirp.feature.chat.presentation.generated.resources.leave_chat
-import chirp.feature.chat.presentation.generated.resources.open_chat_options_menu
-import chirp.feature.chat.presentation.generated.resources.users_icon
+import rosafiesta.core.designsystem.generated.resources.arrow_left_icon
+import rosafiesta.core.designsystem.generated.resources.dots_icon
+import rosafiesta.core.designsystem.generated.resources.log_out_icon
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.chat_members
+import rosafiesta.feature.chat.presentation.generated.resources.go_back
+import rosafiesta.feature.chat.presentation.generated.resources.leave_chat
+import rosafiesta.feature.chat.presentation.generated.resources.open_chat_options_menu
+import rosafiesta.feature.chat.presentation.generated.resources.users_icon
 import com.plcoding.chat.domain.models.ChatMessage
 import com.plcoding.chat.domain.models.ChatMessageDeliveryStatus
 import com.plcoding.chat.presentation.components.ChatHeader
 import com.plcoding.chat.presentation.components.ChatItemHeaderRow
 import com.plcoding.chat.presentation.model.ChatUi
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.components.buttons.ChirpIconButton
-import com.plcoding.core.designsystem.components.dropdown.ChirpDropDownMenu
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaIconButton
+import com.plcoding.core.designsystem.components.dropdown.RosaFiestaDropDownMenu
 import com.plcoding.core.designsystem.components.dropdown.DropDownItem
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import kotlin.time.Clock
-import chirp.core.designsystem.generated.resources.Res as DesignSystemRes
+import rosafiesta.core.designsystem.generated.resources.Res as DesignSystemRes
 
 @Composable
 fun ChatDetailHeader(
@@ -64,7 +64,7 @@ fun ChatDetailHeader(
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         if(!isDetailPresent) {
-            ChirpIconButton(
+            RosaFiestaIconButton(
                 onClick = onBackClick
             ) {
                 Icon(
@@ -92,7 +92,7 @@ fun ChatDetailHeader(
         }
 
         Box {
-            ChirpIconButton(
+            RosaFiestaIconButton(
                 onClick = onChatOptionsClick
             ) {
                 Icon(
@@ -103,7 +103,7 @@ fun ChatDetailHeader(
                 )
             }
 
-            ChirpDropDownMenu(
+            RosaFiestaDropDownMenu(
                 isOpen = isChatOptionsDropDownOpen,
                 onDismiss = onDismissChatOptions,
                 items = listOf(
@@ -128,7 +128,7 @@ fun ChatDetailHeader(
 @Composable
 @Preview
 fun ChatDetailHeaderPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         Column(
             modifier = Modifier
                 .fillMaxSize()

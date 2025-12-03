@@ -1,6 +1,6 @@
-package com.plcoding.chirp.di
+package com.plcoding.rosafiesta.di
 
-import com.plcoding.chirp.MainViewModel
+import com.plcoding.rosafiesta.MainViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

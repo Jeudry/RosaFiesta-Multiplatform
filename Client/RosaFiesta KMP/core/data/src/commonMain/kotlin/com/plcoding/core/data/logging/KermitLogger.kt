@@ -1,9 +1,9 @@
 package com.plcoding.core.data.logging
 
 import co.touchlab.kermit.Logger
-import com.plcoding.core.domain.logging.ChirpLogger
+import com.plcoding.core.domain.logging.RosaFiestaLogger
 
-object KermitLogger: ChirpLogger {
+object KermitLogger: RosaFiestaLogger {
 
     override fun debug(message: String) {
         Logger.d(message)

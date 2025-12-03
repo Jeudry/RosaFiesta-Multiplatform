@@ -42,9 +42,9 @@ import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.no_chat_selected
-import chirp.feature.chat.presentation.generated.resources.select_a_chat
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.no_chat_selected
+import rosafiesta.feature.chat.presentation.generated.resources.select_a_chat
 import com.plcoding.chat.domain.models.ChatMessage
 import com.plcoding.chat.domain.models.ChatMessageDeliveryStatus
 import com.plcoding.chat.presentation.chat_detail.components.ChatDetailHeader
@@ -58,7 +58,7 @@ import com.plcoding.chat.presentation.components.EmptySection
 import com.plcoding.chat.presentation.model.ChatUi
 import com.plcoding.chat.presentation.model.MessageUi
 import com.plcoding.core.designsystem.components.avatar.ChatParticipantUi
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import com.plcoding.core.presentation.util.UiText
@@ -381,7 +381,7 @@ private fun DynamicRoundedCornerColumn(
 @Preview
 @Composable
 private fun ChatDetailEmptyPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         ChatDetailScreen(
             state = ChatDetailState(),
             isDetailPresent = false,
@@ -395,7 +395,7 @@ private fun ChatDetailEmptyPreview() {
 @Preview
 @Composable
 private fun ChatDetailMessagesPreview() {
-    ChirpTheme(darkTheme = true) {
+    RosaFiestaTheme(darkTheme = true) {
         ChatDetailScreen(
             messageListState = rememberLazyListState(),
             state = ChatDetailState(

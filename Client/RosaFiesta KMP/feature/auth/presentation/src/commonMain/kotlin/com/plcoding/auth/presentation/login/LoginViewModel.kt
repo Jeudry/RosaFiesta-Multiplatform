@@ -3,9 +3,9 @@ package com.plcoding.auth.presentation.login
 import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import chirp.feature.auth.presentation.generated.resources.Res
-import chirp.feature.auth.presentation.generated.resources.error_email_not_verified
-import chirp.feature.auth.presentation.generated.resources.error_invalid_credentials
+import rosafiesta.feature.auth.presentation.generated.resources.Res
+import rosafiesta.feature.auth.presentation.generated.resources.error_email_not_verified
+import rosafiesta.feature.auth.presentation.generated.resources.error_invalid_credentials
 import com.plcoding.core.domain.auth.AuthService
 import com.plcoding.core.domain.auth.SessionStorage
 import com.plcoding.core.domain.util.DataError

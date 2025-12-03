@@ -1,4 +1,4 @@
-package com.plcoding.chirp.convention
+package com.plcoding.rosafiesta.convention
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog

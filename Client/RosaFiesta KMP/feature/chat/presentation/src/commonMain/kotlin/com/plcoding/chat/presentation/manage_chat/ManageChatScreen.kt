@@ -5,13 +5,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.chat_members
-import chirp.feature.chat.presentation.generated.resources.create_chat
-import chirp.feature.chat.presentation.generated.resources.save
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.chat_members
+import rosafiesta.feature.chat.presentation.generated.resources.create_chat
+import rosafiesta.feature.chat.presentation.generated.resources.save
 import com.plcoding.chat.presentation.components.manage_chat.ManageChatAction
 import com.plcoding.chat.presentation.components.manage_chat.ManageChatScreen
-import com.plcoding.core.designsystem.components.dialogs.ChirpAdaptiveDialogSheetLayout
+import com.plcoding.core.designsystem.components.dialogs.RosaFiestaAdaptiveDialogSheetLayout
 import com.plcoding.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -35,7 +35,7 @@ fun ManageChatRoot(
         }
     }
 
-    ChirpAdaptiveDialogSheetLayout(
+    RosaFiestaAdaptiveDialogSheetLayout(
         onDismiss = onDismiss
     ) {
         ManageChatScreen(

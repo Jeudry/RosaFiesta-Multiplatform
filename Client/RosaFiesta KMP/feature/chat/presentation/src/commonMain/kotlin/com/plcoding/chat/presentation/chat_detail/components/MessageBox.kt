@@ -27,15 +27,15 @@ import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import chirp.feature.chat.presentation.generated.resources.Res
-import chirp.feature.chat.presentation.generated.resources.cloud_off_icon
-import chirp.feature.chat.presentation.generated.resources.send
-import chirp.feature.chat.presentation.generated.resources.send_a_message
+import rosafiesta.feature.chat.presentation.generated.resources.Res
+import rosafiesta.feature.chat.presentation.generated.resources.cloud_off_icon
+import rosafiesta.feature.chat.presentation.generated.resources.send
+import rosafiesta.feature.chat.presentation.generated.resources.send_a_message
 import com.plcoding.chat.domain.models.ConnectionState
 import com.plcoding.chat.presentation.util.toUiText
-import com.plcoding.core.designsystem.components.buttons.ChirpButton
-import com.plcoding.core.designsystem.components.textfields.ChirpMultiLineTextField
-import com.plcoding.core.designsystem.theme.ChirpTheme
+import com.plcoding.core.designsystem.components.buttons.RosaFiestaButton
+import com.plcoding.core.designsystem.components.textfields.RosaFiestaMultiLineTextField
+import com.plcoding.core.designsystem.theme.RosaFiestaTheme
 import com.plcoding.core.designsystem.theme.extended
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
@@ -50,7 +50,7 @@ fun MessageBox(
     modifier: Modifier = Modifier
 ) {
     val isConnected = connectionState == ConnectionState.CONNECTED
-    ChirpMultiLineTextField(
+    RosaFiestaMultiLineTextField(
         state = messageTextFieldState,
         modifier = modifier
             .onPreviewKeyEvent { keyEvent ->
@@ -89,7 +89,7 @@ fun MessageBox(
                     )
                 }
             }
-            ChirpButton(
+            RosaFiestaButton(
                 text = stringResource(Res.string.send),
                 onClick = onSendClick,
                 enabled = isConnected && isSendButtonEnabled
@@ -101,7 +101,7 @@ fun MessageBox(
 @Composable
 @Preview
 fun MessageBoxPreview() {
-    ChirpTheme {
+    RosaFiestaTheme {
         Box(
             modifier = Modifier
                 .fillMaxWidth()

@@ -1,4 +1,4 @@
-rootProject.name = "Chirp"
+rootProject.name = "RosaFiesta"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

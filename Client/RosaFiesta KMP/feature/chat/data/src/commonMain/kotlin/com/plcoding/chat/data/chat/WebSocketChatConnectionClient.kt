@@ -7,7 +7,7 @@ import com.plcoding.chat.data.mappers.toDomain
 import com.plcoding.chat.data.mappers.toEntity
 import com.plcoding.chat.data.mappers.toNewMessage
 import com.plcoding.chat.data.network.KtorWebSocketConnector
-import com.plcoding.chat.database.ChirpChatDatabase
+import com.plcoding.chat.database.RosaFiestaChatDatabase
 import com.plcoding.chat.domain.chat.ChatConnectionClient
 import com.plcoding.chat.domain.chat.ChatRepository
 import com.plcoding.chat.domain.message.MessageRepository
@@ -33,7 +33,7 @@ import kotlinx.serialization.json.Json
 class WebSocketChatConnectionClient(
     private val webSocketConnector: KtorWebSocketConnector,
     private val chatRepository: ChatRepository,
-    private val database: ChirpChatDatabase,
+    private val database: RosaFiestaChatDatabase,
     private val sessionStorage: SessionStorage,
     private val json: Json,
     private val applicationScope: CoroutineScope
