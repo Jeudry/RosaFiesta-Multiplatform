@@ -40,6 +40,11 @@ spring:
     locations: classpath:db/migration
     schemas: chat_service,user_service,notification_service
 
+  liquibase:
+    enabled: false
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    default-schema: public
+
   jpa:
     hibernate:
       ddl-auto: update

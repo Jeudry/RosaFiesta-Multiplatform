@@ -39,6 +39,8 @@ dependencies {
 
     implementation(libs.flyway.core)
     implementation(libs.flyway.postgresql)
+
+    implementation(libs.liquibase.core)
   
     runtimeOnly(libs.postgresql)
 }

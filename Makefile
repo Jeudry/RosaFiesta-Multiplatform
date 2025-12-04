@@ -5,10 +5,10 @@ help: ## Muestra esta ayuda
 
 # Docker Compose Tradicional
 local-up: ## Inicia los servicios locales con Docker Compose
-	@./start-local.sh
+	@./scripts/start-local.sh
 
 local-down: ## Detiene los servicios locales
-	@./stop-local.sh
+	@./scripts/stop-local.sh
 
 local-logs: ## Muestra los logs de los servicios locales
 	@docker-compose logs -f
@@ -63,10 +63,10 @@ docker-ps: ## Muestra el estado de los contenedores
 	@docker-compose ps
 
 status: ## Verifica el estado de todos los servicios
-	@./check-status.sh
+	@./scripts/check-status.sh
 
 verify: ## Verifica la configuración del proyecto
-	@./verify-setup.sh
+	@./scripts/verify-setup.sh
 
 # Atajos comunes
 up: local-up ## Alias para local-up
