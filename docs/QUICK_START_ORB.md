@@ -120,17 +120,13 @@ export MAIL_PASSWORD="your-app-password"
 ```
 
 ### Error: "schema does not exist"
-**Solution**: Schemas are created automatically by Liquibase on first startup.
-
-If you need to recreate them manually:
+**Solution**: Create schemas manually
 ```bash
 docker exec rosafiesta-postgres psql -U postgres -d rosafiesta -c \
   "CREATE SCHEMA IF NOT EXISTS chat_service; \
    CREATE SCHEMA IF NOT EXISTS user_service; \
    CREATE SCHEMA IF NOT EXISTS notification_service;"
 ```
-
-**Note**: With Liquibase enabled, database migrations are handled automatically.
 
 ### Container IPs changed
 **Solution**: Get new IPs and update `application-orb.yml`

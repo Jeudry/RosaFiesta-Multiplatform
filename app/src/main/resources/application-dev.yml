@@ -1,12 +1,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: validate
-
-  liquibase:
-    enabled: true
-    change-log: classpath:db/changelog/db.changelog-master.yaml
-    default-schema: public
+      ddl-auto: update
 
   mail:
     host: smtp.gmail.com

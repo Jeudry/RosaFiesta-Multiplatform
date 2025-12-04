@@ -1,9 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db/changelog/migrations/001-create-schemas.yaml
-  - include:
-      file: db/changelog/migrations/002-create-user-service-tables.yaml
-  - include:
-      file: db/changelog/migrations/003-create-chat-service-tables.yaml
-  - include:
-      file: db/changelog/migrations/004-create-notification-service-tables.yaml
