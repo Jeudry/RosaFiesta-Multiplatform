@@ -8,6 +8,10 @@ group = "com.rosafiesta"
 version = "0.0.1-SNAPSHOT"
 description = "RosaFiesta API backend"
 
+springBoot {
+    mainClass.set("com.rosafiesta.api.RosaFiestaApiApplicationKt")
+}
+
 tasks {
   named<BootJar>("bootJar") {
     from(project(":notification").projectDir.resolve("src/main/resources")){
@@ -33,6 +37,8 @@ dependencies {
 
     implementation(libs.kotlin.reflect)
 
-
+    implementation(libs.flyway.core)
+    implementation(libs.flyway.postgresql)
+  
     runtimeOnly(libs.postgresql)
 }

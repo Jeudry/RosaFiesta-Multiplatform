@@ -43,7 +43,7 @@ docker logs rosafiesta-postgres 2>&1 | tail -15
 # 9. Probar conexión CON contraseña
 echo ""
 echo "🧪 Probando conexión con contraseña 'postgres'..."
-PGPASSWORD='postgres' psql -h 127.0.0.1 -p 5432 -U postgres -d rosafiesta -c "
+PGPASSWORD='postgres' psql -h postgres.rosafiesta.orb.local -p 5432 -U postgres -d rosafiesta -c "
 SELECT 
   '✅ Conexión exitosa!' as status, 
   current_database() as database, 
@@ -59,17 +59,17 @@ if [ $? -eq 0 ]; then
   echo ""
   echo "📋 Configuración:"
   echo "   PostgreSQL:"
-  echo "     - Host: localhost:5432"
+  echo "     - Host: postgres.rosafiesta.orb.local:5432"
   echo "     - Usuario: postgres"
   echo "     - Contraseña: postgres"
   echo "     - Base de datos: rosafiesta"
   echo ""
   echo "   Redis:"
-  echo "     - Host: localhost:6379"
+  echo "     - Host: redis.rosafiesta.orb.local:6379"
   echo "     - Contraseña: rosafiesta_redis_password"
   echo ""
   echo "   RabbitMQ:"
-  echo "     - Host: localhost:5672"
+  echo "     - Host: rabbitmq.rosafiesta.orb.local:5672"
   echo "     - Usuario: rosafiesta_user"
   echo "     - Contraseña: rosafiesta_password"
   echo "     - Management UI: http://localhost:15672"
