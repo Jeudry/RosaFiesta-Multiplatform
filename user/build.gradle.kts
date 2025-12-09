@@ -15,6 +15,12 @@ repositories {
 
 dependencies {
     implementation(projects.common)
+    
+    // User modules - exported as API so consumers can access them
+    api(projects.userDomain)
+    api(projects.userInfra)
+    api(projects.userService)
+    api(projects.userApi)
 
     implementation(libs.spring.boot.starter.security)
     implementation(libs.spring.boot.starter.validation)
