@@ -7,8 +7,8 @@ group = "com.rosafiesta"
 version = "0.0.1-SNAPSHOT"
 
 dependencies {
-    api(projects.userDomain)
-    api(projects.userService)
+    api(projects.user.domain)
+    api(projects.user.service)
     implementation(projects.common)
 
     implementation(libs.spring.boot.starter.web)

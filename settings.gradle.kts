@@ -24,10 +24,10 @@ rootProject.name = "rosafiesta-api"
 
 include("app")
 
-include("user-domain")
-include("user-infra")
-include("user-service")
-include("user-api")
+include("user:domain")
+include("user:infra")
+include("user:service")
+include("user:api")
 include("chat")
 include("notification")
 include("common")

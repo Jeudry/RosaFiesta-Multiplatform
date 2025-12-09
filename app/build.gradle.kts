@@ -19,10 +19,10 @@ tasks {
 dependencies {
     implementation(projects.common)
     // User modules
-    implementation(projects.userDomain)
-    implementation(projects.userInfra)
-    implementation(projects.userService)
-    implementation(projects.userApi)
+    implementation(projects.user.domain)
+    implementation(projects.user.infra)
+    implementation(projects.user.service)
+    implementation(projects.user.api)
     implementation(projects.chat)
     implementation(projects.notification)
     implementation(libs.spring.boot.starter.data.redis)
