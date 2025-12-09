@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation(projects.common)
+    implementation(projects.core)
     implementation(libs.spring.boot.starter.data.jpa)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.amqp)

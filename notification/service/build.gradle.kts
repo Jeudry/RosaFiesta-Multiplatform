@@ -9,7 +9,7 @@ version = "0.0.1-SNAPSHOT"
 dependencies {
     api(projects.notification.domain)
     api(projects.notification.infra)
-    implementation(projects.common)
+    implementation(projects.core)
 
     testImplementation(kotlin("test"))
 }

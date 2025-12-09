@@ -17,7 +17,7 @@ tasks {
   }
 }
 dependencies {
-    implementation(projects.common)
+    implementation(projects.core)
     // User modules
     implementation(projects.user.domain)
     implementation(projects.user.infra)
