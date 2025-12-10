@@ -1,10 +1,9 @@
 plugins {
     id("java-library")
-    id("rosafiesta.spring-boot-service")
-    kotlin("plugin.spring")
+    id("rosafiesta.kotlin-common")
 }
 
-group = "com.rosafiesta.chat"
+group = "com.rosafiesta.core"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -15,14 +14,9 @@ repositories {
 
 dependencies {
     implementation(projects.core.domain)
-    implementation(projects.core.infra)
-    implementation(projects.chat.domain)
     
-    implementation(libs.spring.boot.starter.data.jpa)
-    implementation(libs.spring.boot.starter.amqp)
-    implementation(libs.spring.boot.starter.websocket)
-    
-    runtimeOnly(libs.postgresql)
+    implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.security)
     
     testImplementation(kotlin("test"))
 }

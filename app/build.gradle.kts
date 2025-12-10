@@ -10,6 +10,7 @@ springBoot {
 }
 tasks {
   named<BootJar>("bootJar") {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from(project(":notification:infra").projectDir.resolve("src/main/resources")){
       into("")
     }
@@ -17,20 +18,21 @@ tasks {
   }
 }
 dependencies {
-    implementation(projects.core)
-    
+    // Core modules
+    implementation(projects.core.domain)
+    implementation(projects.core.infra)
+    implementation(projects.core.service)
+    implementation(projects.core.api)
     // User modules
     implementation(projects.user.domain)
     implementation(projects.user.infra)
     implementation(projects.user.service)
     implementation(projects.user.api)
-    
     // Chat modules
     implementation(projects.chat.domain)
     implementation(projects.chat.infra)
     implementation(projects.chat.service)
     implementation(projects.chat.api)
-    
     // Notification modules
     implementation(projects.notification.domain)
     implementation(projects.notification.infra)

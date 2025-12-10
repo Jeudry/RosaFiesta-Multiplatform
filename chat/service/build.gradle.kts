@@ -14,7 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation(projects.core)
+    implementation(projects.core.domain)
+    implementation(projects.core.infra)
     implementation(projects.chat.domain)
     implementation(projects.chat.infra)
     

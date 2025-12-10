@@ -39,4 +39,7 @@ include("user:infra")
 include("user:service")
 include("user:api")
 
-include("core")
+include("core:domain")
+include("core:infra")
+include("core:service")
+include("core:api")

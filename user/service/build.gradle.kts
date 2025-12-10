@@ -10,7 +10,9 @@ version = "0.0.1-SNAPSHOT"
 dependencies {
     api(projects.user.domain)
     api(projects.user.infra)
-    implementation(projects.core)
+    implementation(projects.core.domain)
+    implementation(projects.core.service)
+    implementation(projects.core.infra)
 
     implementation(libs.spring.boot.starter.security)
     implementation(libs.jwt.api)

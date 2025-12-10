@@ -3,7 +3,7 @@ plugins {
     id("rosafiesta.kotlin-common")
 }
 
-group = "com.rosafiesta"
+group = "com.rosafiesta.core"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -13,22 +13,21 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    implementation(libs.spring.boot.starter.amqp)
+    implementation(projects.core.domain)
+    
     implementation(libs.spring.boot.starter.security)
-
+    
     implementation(libs.jwt.api)
     runtimeOnly(libs.jwt.impl)
     runtimeOnly(libs.jwt.jackson)
-
-
-    api(libs.jackson.module.kotlin)
-    api(libs.kotlin.reflect)
+    
+    testImplementation(kotlin("test"))
 }
 
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(21)
 }
