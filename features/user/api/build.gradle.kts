@@ -1,27 +1,23 @@
 plugins {
     id("rosafiesta.kotlin-common")
     id("java-library")
-    kotlin("plugin.jpa")
 }
-
 group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
 
 base {
-    archivesName.set("user-service")
+    archivesName.set("user-api")
 }
-
 dependencies {
-    api(projects.user.domain)
-    api(projects.user.infra)
+    api(projects.features.user.domain)
+    api(projects.features.user.service)
     implementation(projects.core.domain)
+    implementation(projects.core.api)
     implementation(projects.core.service)
-    implementation(projects.core.infra)
-
+    implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter.security)
+    implementation(libs.spring.boot.starter.validation)
+    implementation(libs.spring.boot.starter.data.redis)
     implementation(libs.jwt.api)
-    runtimeOnly(libs.jwt.impl)
-    runtimeOnly(libs.jwt.jackson)
-
     testImplementation(kotlin("test"))
 }

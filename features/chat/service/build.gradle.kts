@@ -8,7 +8,7 @@ group = "com.rosafiesta.chat"
 version = "0.0.1-SNAPSHOT"
 
 base {
-    archivesName.set("chat-infra")
+    archivesName.set("chat-service")
 }
 
 repositories {
@@ -20,13 +20,12 @@ repositories {
 dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.infra)
-    implementation(projects.chat.domain)
+    implementation(projects.features.chat.domain)
+    implementation(projects.features.chat.infra)
     
     implementation(libs.spring.boot.starter.data.jpa)
     implementation(libs.spring.boot.starter.amqp)
-    implementation(libs.spring.boot.starter.websocket)
-    
-    runtimeOnly(libs.postgresql)
+    implementation(libs.jackson.datatype.jsr310)
     
     testImplementation(kotlin("test"))
 }

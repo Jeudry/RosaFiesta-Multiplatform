@@ -12,7 +12,7 @@ base {
 }
 
 dependencies {
-    api(projects.notification.domain)
+    api(projects.features.notification.domain)
     implementation(projects.core.domain)
     implementation(projects.core.infra)
 

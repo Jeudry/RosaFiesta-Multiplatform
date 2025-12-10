@@ -11,8 +11,8 @@ base {
 }
 
 dependencies {
-    api(projects.notification.domain)
-    api(projects.notification.infra)
+    api(projects.features.notification.domain)
+    api(projects.features.notification.infra)
     implementation(projects.core.domain)
 
     testImplementation(kotlin("test"))

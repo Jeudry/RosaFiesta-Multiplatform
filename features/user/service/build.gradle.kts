@@ -8,20 +8,20 @@ group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
 
 base {
-    archivesName.set("user-infra")
+    archivesName.set("user-service")
 }
 
 dependencies {
-    api(projects.user.domain)
+    api(projects.features.user.domain)
+    api(projects.features.user.infra)
     implementation(projects.core.domain)
+    implementation(projects.core.service)
     implementation(projects.core.infra)
 
-    implementation(libs.spring.boot.starter.web)
-    api(libs.spring.boot.starter.data.jpa)
-    implementation(libs.spring.boot.starter.data.redis)
-    implementation(libs.spring.boot.starter.amqp)
     implementation(libs.spring.boot.starter.security)
-    runtimeOnly(libs.postgresql)
+    implementation(libs.jwt.api)
+    runtimeOnly(libs.jwt.impl)
+    runtimeOnly(libs.jwt.jackson)
 
     testImplementation(kotlin("test"))
 }

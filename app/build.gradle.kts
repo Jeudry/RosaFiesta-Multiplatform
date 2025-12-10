@@ -10,7 +10,7 @@ springBoot {
 }
 tasks {
   named<BootJar>("bootJar") {
-    from(project(":notification:infra").projectDir.resolve("src/main/resources")){
+    from(project(":features:notification:infra").projectDir.resolve("src/main/resources")){
       into("")
     }
     // User and notification modules have resources in infra submodule
@@ -23,20 +23,20 @@ dependencies {
     implementation(projects.core.service)
     implementation(projects.core.api)
     // User modules
-    implementation(projects.user.domain)
-    implementation(projects.user.infra)
-    implementation(projects.user.service)
-    implementation(projects.user.api)
+    implementation(projects.features.user.domain)
+    implementation(projects.features.user.infra)
+    implementation(projects.features.user.service)
+    implementation(projects.features.user.api)
     // Chat modules
-    implementation(projects.chat.domain)
-    implementation(projects.chat.infra)
-    implementation(projects.chat.service)
-    implementation(projects.chat.api)
+    implementation(projects.features.chat.domain)
+    implementation(projects.features.chat.infra)
+    implementation(projects.features.chat.service)
+    implementation(projects.features.chat.api)
     // Notification modules
-    implementation(projects.notification.domain)
-    implementation(projects.notification.infra)
-    implementation(projects.notification.service)
-    implementation(projects.notification.api)
+    implementation(projects.features.notification.domain)
+    implementation(projects.features.notification.infra)
+    implementation(projects.features.notification.service)
+    implementation(projects.features.notification.api)
     implementation(libs.spring.boot.starter.data.redis)
     implementation(libs.spring.boot.starter.amqp)
     implementation(libs.spring.boot.starter.data.jpa)

@@ -11,8 +11,8 @@ base {
 }
 
 dependencies {
-    api(projects.notification.domain)
-    api(projects.notification.service)
+    api(projects.features.notification.domain)
+    api(projects.features.notification.service)
     implementation(projects.core.domain)
     implementation(projects.core.api)
 
