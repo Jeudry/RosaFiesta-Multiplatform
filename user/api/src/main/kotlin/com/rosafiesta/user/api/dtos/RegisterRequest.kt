@@ -4,9 +4,12 @@ import com.rosafiesta.user.api.utils.Password
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonProperty
 import jakarta.validation.constraints.Email
+import jakarta.validation.constraints.Pattern
 import org.hibernate.validator.constraints.Length
+import org.intellij.lang.annotations.RegExp
+import kotlinx.serialization.Serializable
 
-@kotlinx.serialization.Serializable
+@Serializable
 data class RegisterRequest @JsonCreator constructor(
     @field:Email("Must be a valid email address")
     @JsonProperty("email")
