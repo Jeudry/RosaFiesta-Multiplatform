@@ -1,6 +1,6 @@
 package com.rosafiesta.chat.service
 
-import com.rosafiesta.api.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.ChatId
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.stereotype.Component
 

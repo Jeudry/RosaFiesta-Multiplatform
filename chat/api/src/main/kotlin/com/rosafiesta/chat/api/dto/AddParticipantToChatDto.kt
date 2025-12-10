@@ -1,6 +1,6 @@
 package com.rosafiesta.chat.api.dto
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import jakarta.validation.constraints.Size
 
 data class AddParticipantToChatDto(

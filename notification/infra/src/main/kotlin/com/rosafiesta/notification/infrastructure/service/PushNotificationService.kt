@@ -3,8 +3,8 @@ package com.rosafiesta.notification.infrastructure.service
 import com.rosafiesta.notification.domain.exceptions.InvalidDeviceTokenEx
 import com.rosafiesta.notification.domain.model.DeviceToken
 import com.rosafiesta.notification.domain.model.PushNotification
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.notification.infrastructure.database.DeviceTokenEntity
 import com.rosafiesta.notification.infrastructure.database.DeviceTokenRepository
 import com.rosafiesta.notification.infrastructure.mappers.toEntity

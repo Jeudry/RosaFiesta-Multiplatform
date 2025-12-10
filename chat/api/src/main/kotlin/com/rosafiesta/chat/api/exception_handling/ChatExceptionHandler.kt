@@ -6,7 +6,7 @@ import com.rosafiesta.chat.domain.exceptions.ChatParticipantNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.InvalidChatSizeEx
 import com.rosafiesta.chat.domain.exceptions.InvalidProfilePictureEx
 import com.rosafiesta.chat.domain.exceptions.StorageEx
-import com.rosafiesta.api.core.domain.exceptions.*
+import com.rosafiesta.core.domain.exceptions.*
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseStatus

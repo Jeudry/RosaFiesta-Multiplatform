@@ -1,7 +1,7 @@
 package com.rosafiesta.chat.service
 
 import com.rosafiesta.chat.domain.models.ChatParticipant
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.entities.ChatParticipantEntity
 import com.rosafiesta.chat.infra.database.mappers.toModel
 import com.rosafiesta.chat.infra.database.repositories.ChatParticipantRepository

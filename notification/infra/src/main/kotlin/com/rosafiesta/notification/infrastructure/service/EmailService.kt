@@ -1,6 +1,6 @@
 package com.rosafiesta.notification.infrastructure.service
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.mail.javamail.JavaMailSender

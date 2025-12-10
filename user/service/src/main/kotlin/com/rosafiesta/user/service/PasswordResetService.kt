@@ -1,17 +1,17 @@
 package com.rosafiesta.user.service
 
-import com.rosafiesta.api.core.domain.exceptions.InvalidTokenEx
-import com.rosafiesta.api.core.domain.events.user.UserEvent
+import com.rosafiesta.core.domain.exceptions.InvalidTokenEx
+import com.rosafiesta.core.domain.events.user.UserEvent
 import com.rosafiesta.user.domain.exception.InvalidCredentialsEx
 import com.rosafiesta.user.domain.exception.PasswordHashFailedEx
 import com.rosafiesta.user.domain.exception.SamePasswordEx
 import com.rosafiesta.user.domain.exception.UserNotFoundEx
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.user.infrastructure.database.entities.PasswordResetTokenEntity
 import com.rosafiesta.user.infrastructure.database.repositories.PasswordResetTokenRepository
 import com.rosafiesta.user.infrastructure.database.repositories.RefreshTokenRepository
 import com.rosafiesta.user.infrastructure.database.repositories.UserRepository
-import com.rosafiesta.api.core.infrastructure.message_queue.EventPublisher
+import com.rosafiesta.core.infrastructure.message_queue.EventPublisher
 import com.rosafiesta.user.infrastructure.security.PasswordEncoder
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.scheduling.annotation.Scheduled

@@ -1,7 +1,7 @@
 package com.rosafiesta.chat.api.controllers
 
-import com.rosafiesta.api.core.api.utils.requestUserId
-import com.rosafiesta.api.core.domain.types.ChatMessageId
+import com.rosafiesta.core.api.utils.requestUserId
+import com.rosafiesta.core.domain.types.ChatMessageId
 import com.rosafiesta.chat.service.ChatMessageService
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.PathVariable

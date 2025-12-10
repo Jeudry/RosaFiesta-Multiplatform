@@ -1,6 +1,6 @@
 package com.rosafiesta.chat.domain.models
 
-import com.rosafiesta.api.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.ChatId
 import java.time.Instant
 
 data class Chat(

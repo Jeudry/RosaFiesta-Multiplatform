@@ -5,8 +5,8 @@ import com.rosafiesta.chat.api.dto.ChatDto
 import com.rosafiesta.chat.api.dto.ChatMessageDto
 import com.rosafiesta.chat.api.dto.CreateChatRequest
 import com.rosafiesta.chat.api.mappers.toDto
-import com.rosafiesta.api.core.api.utils.requestUserId
-import com.rosafiesta.api.core.domain.types.ChatId
+import com.rosafiesta.core.api.utils.requestUserId
+import com.rosafiesta.core.domain.types.ChatId
 import com.rosafiesta.chat.service.ChatMessageService
 import com.rosafiesta.chat.service.ChatService
 import jakarta.validation.Valid

@@ -4,7 +4,7 @@ import com.rosafiesta.chat.api.dto.ChatParticipantDto
 import com.rosafiesta.chat.api.dto.ConfirmProfilePictureRequest
 import com.rosafiesta.chat.api.dto.ProfilePictureUploadResponse
 import com.rosafiesta.chat.api.mappers.toDto
-import com.rosafiesta.api.core.api.utils.requestUserId
+import com.rosafiesta.core.api.utils.requestUserId
 import com.rosafiesta.chat.service.ChatParticipantService
 import com.rosafiesta.chat.service.ProfilePictureService
 import jakarta.validation.Valid

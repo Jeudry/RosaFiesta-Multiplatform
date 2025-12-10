@@ -7,11 +7,11 @@ import com.rosafiesta.chat.domain.exceptions.ChatNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.ChatParticipantNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.InvalidChatSizeEx
 import com.rosafiesta.chat.domain.exceptions.SelfInvitationNotAllowedEx
-import com.rosafiesta.api.core.domain.exceptions.*
+import com.rosafiesta.core.domain.exceptions.*
 import com.rosafiesta.chat.domain.models.Chat
 import com.rosafiesta.chat.domain.models.ChatMessage
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.entities.ChatEntity
 import com.rosafiesta.chat.infra.database.mappers.toModel
 import com.rosafiesta.chat.infra.database.repositories.ChatMessageRepository

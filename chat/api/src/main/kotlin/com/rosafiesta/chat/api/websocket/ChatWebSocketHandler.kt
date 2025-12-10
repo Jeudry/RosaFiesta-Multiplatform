@@ -2,12 +2,12 @@ package com.rosafiesta.chat.api.websocket
 
 import com.rosafiesta.chat.api.dto.ws.*
 import com.rosafiesta.chat.api.mappers.toDto
-import com.rosafiesta.api.core.domain.events.*
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.events.*
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.service.ChatMessageService
 import com.rosafiesta.chat.service.ChatService
-import com.rosafiesta.api.core.services.JwtService
+import com.rosafiesta.core.services.JwtService
 import com.fasterxml.jackson.databind.JsonMappingException
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule

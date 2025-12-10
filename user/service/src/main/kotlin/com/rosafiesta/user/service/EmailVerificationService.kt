@@ -1,14 +1,14 @@
 package com.rosafiesta.user.service
 
-import com.rosafiesta.api.core.domain.exceptions.InvalidTokenEx
-import com.rosafiesta.api.core.domain.events.user.UserEvent
+import com.rosafiesta.core.domain.exceptions.InvalidTokenEx
+import com.rosafiesta.core.domain.events.user.UserEvent
 import com.rosafiesta.user.domain.exception.UserNotFoundEx
 import com.rosafiesta.user.domain.model.EmailVerificationToken
 import com.rosafiesta.user.infrastructure.database.entities.EmailVerificationTokenEntity
 import com.rosafiesta.user.infrastructure.database.mappers.toModel
 import com.rosafiesta.user.infrastructure.database.repositories.EmailVerificationTokenRepository
 import com.rosafiesta.user.infrastructure.database.repositories.UserRepository
-import com.rosafiesta.api.core.infrastructure.message_queue.EventPublisher
+import com.rosafiesta.core.infrastructure.message_queue.EventPublisher
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service

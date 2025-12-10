@@ -1,6 +1,6 @@
 package com.rosafiesta.notification.infrastructure.database
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import jakarta.persistence.*
 import org.hibernate.annotations.CreationTimestamp
 import java.time.Instant

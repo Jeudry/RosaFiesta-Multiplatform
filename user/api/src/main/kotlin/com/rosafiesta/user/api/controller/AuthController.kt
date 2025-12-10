@@ -10,7 +10,7 @@ import com.rosafiesta.user.api.dtos.RegisterRequest
 import com.rosafiesta.user.api.dtos.ResetPasswordRequest
 import com.rosafiesta.user.api.dtos.UserDto
 import com.rosafiesta.user.api.mappers.toDto
-import com.rosafiesta.api.core.api.utils.requestUserId
+import com.rosafiesta.core.api.utils.requestUserId
 import com.rosafiesta.user.infrastructure.rate_limiting.EmailRateLimiter
 import com.rosafiesta.user.service.AuthService
 import com.rosafiesta.user.service.EmailVerificationService

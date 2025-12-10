@@ -1,6 +1,6 @@
 package com.rosafiesta.user.infrastructure.database.repositories
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.user.infrastructure.database.entities.RefreshTokenEntity
 import org.springframework.data.jpa.repository.JpaRepository
 

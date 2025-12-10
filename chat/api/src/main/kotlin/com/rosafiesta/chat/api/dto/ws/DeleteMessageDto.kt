@@ -1,7 +1,7 @@
 package com.rosafiesta.chat.api.dto.ws
 
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.ChatMessageId
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.ChatMessageId
 
 data class DeleteMessageDto(
   val chatId: ChatId,

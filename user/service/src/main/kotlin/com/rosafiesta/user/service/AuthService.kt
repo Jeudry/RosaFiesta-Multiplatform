@@ -1,7 +1,7 @@
 package com.rosafiesta.user.service
 
-import com.rosafiesta.api.core.domain.exceptions.InvalidTokenEx
-import com.rosafiesta.api.core.domain.events.user.UserEvent
+import com.rosafiesta.core.domain.exceptions.InvalidTokenEx
+import com.rosafiesta.core.domain.events.user.UserEvent
 import com.rosafiesta.user.domain.exception.EmailNotVerifiedEx
 import com.rosafiesta.user.domain.exception.InvalidCredentialsEx
 import com.rosafiesta.user.domain.exception.PasswordHashFailedEx
@@ -9,15 +9,15 @@ import com.rosafiesta.user.domain.exception.UserAlreadyExistsEx
 import com.rosafiesta.user.domain.exception.UserNotFoundEx
 import com.rosafiesta.user.domain.model.AuthenticatedUser
 import com.rosafiesta.user.domain.model.User
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.user.infrastructure.database.entities.RefreshTokenEntity
 import com.rosafiesta.user.infrastructure.database.entities.UserEntity
 import com.rosafiesta.user.infrastructure.database.mappers.toModel
 import com.rosafiesta.user.infrastructure.database.repositories.RefreshTokenRepository
 import com.rosafiesta.user.infrastructure.database.repositories.UserRepository
-import com.rosafiesta.api.core.infrastructure.message_queue.EventPublisher
+import com.rosafiesta.core.infrastructure.message_queue.EventPublisher
 import com.rosafiesta.user.infrastructure.security.PasswordEncoder
-import com.rosafiesta.api.core.services.JwtService
+import com.rosafiesta.core.services.JwtService
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.security.MessageDigest

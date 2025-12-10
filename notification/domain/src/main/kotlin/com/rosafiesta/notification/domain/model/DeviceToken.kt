@@ -1,6 +1,6 @@
 package com.rosafiesta.notification.domain.model
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import java.time.Instant
 
 data class DeviceToken(

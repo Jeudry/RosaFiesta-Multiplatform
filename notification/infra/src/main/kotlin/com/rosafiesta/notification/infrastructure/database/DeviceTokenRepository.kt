@@ -1,6 +1,6 @@
 package com.rosafiesta.notification.infrastructure.database
 
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface DeviceTokenRepository: JpaRepository<DeviceTokenEntity, Long> {

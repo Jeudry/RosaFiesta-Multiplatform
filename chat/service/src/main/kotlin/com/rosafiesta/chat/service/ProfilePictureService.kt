@@ -4,7 +4,7 @@ import com.rosafiesta.chat.domain.events.ProfilePictureUpdatedEv
 import com.rosafiesta.chat.domain.exceptions.ChatParticipantNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.InvalidProfilePictureEx
 import com.rosafiesta.chat.domain.models.ProfilePictureUploadCredentials
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.repositories.ChatParticipantRepository
 import com.rosafiesta.chat.infra.storage.SupabaseStorageService
 import jakarta.transaction.Transactional

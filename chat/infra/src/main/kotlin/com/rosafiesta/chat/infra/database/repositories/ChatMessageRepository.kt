@@ -1,7 +1,7 @@
 package com.rosafiesta.chat.infra.database.repositories
 
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.ChatMessageId
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.ChatMessageId
 import com.rosafiesta.chat.infra.database.entities.ChatMessageEntity
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable

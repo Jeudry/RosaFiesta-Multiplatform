@@ -1,21 +1,21 @@
 package com.rosafiesta.chat.service
 
 import com.rosafiesta.chat.domain.events.MessageDeletedEvent
-import com.rosafiesta.api.core.domain.events.chat.ChatEvent
+import com.rosafiesta.core.domain.events.chat.ChatEvent
 import com.rosafiesta.chat.domain.exceptions.ChatMessageNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.ChatNotFoundEx
 import com.rosafiesta.chat.domain.exceptions.ChatParticipantNotFoundEx
-import com.rosafiesta.api.core.domain.exceptions.ForbiddenEx
+import com.rosafiesta.core.domain.exceptions.ForbiddenEx
 import com.rosafiesta.chat.domain.models.ChatMessage
-import com.rosafiesta.api.core.domain.types.ChatId
-import com.rosafiesta.api.core.domain.types.ChatMessageId
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.ChatId
+import com.rosafiesta.core.domain.types.ChatMessageId
+import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.entities.ChatMessageEntity
 import com.rosafiesta.chat.infra.database.mappers.toModel
 import com.rosafiesta.chat.infra.database.repositories.ChatMessageRepository
 import com.rosafiesta.chat.infra.database.repositories.ChatParticipantRepository
 import com.rosafiesta.chat.infra.database.repositories.ChatRepository
-import com.rosafiesta.api.core.infrastructure.message_queue.EventPublisher
+import com.rosafiesta.core.infrastructure.message_queue.EventPublisher
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.data.repository.findByIdOrNull

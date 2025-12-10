@@ -3,7 +3,7 @@ package com.rosafiesta.chat.infra.storage
 import com.rosafiesta.chat.domain.exceptions.InvalidProfilePictureEx
 import com.rosafiesta.chat.domain.exceptions.StorageEx
 import com.rosafiesta.chat.domain.models.ProfilePictureUploadCredentials
-import com.rosafiesta.api.core.domain.types.UserId
+import com.rosafiesta.core.domain.types.UserId
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestClient

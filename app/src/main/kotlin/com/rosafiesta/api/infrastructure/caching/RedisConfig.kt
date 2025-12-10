@@ -2,7 +2,7 @@
 
 package com.rosafiesta.api.infrastructure.caching
 
-import com.rosafiesta.api.core.domain.events.RosaFiestaEvent
+import com.rosafiesta.core.domain.events.RosaFiestaEvent
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.jsontype.BasicPolymorphicTypeValidator
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
