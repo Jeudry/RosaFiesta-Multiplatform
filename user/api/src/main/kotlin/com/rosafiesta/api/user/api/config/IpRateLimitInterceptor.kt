@@ -1,4 +1,4 @@
-package com.rosafiesta.user.api.config
+package com.rosafiesta.api.user.api.config
 
 import com.rosafiesta.api.user.domain.exception.RateLimitEx
 import com.rosafiesta.api.user.infrastructure.rate_limiting.IpRateLimiter

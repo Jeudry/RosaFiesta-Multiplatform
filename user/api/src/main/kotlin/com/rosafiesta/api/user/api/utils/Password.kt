@@ -1,4 +1,4 @@
-package com.rosafiesta.user.api.utils
+package com.rosafiesta.api.user.api.utils
 
 import jakarta.validation.Constraint
 import jakarta.validation.Payload

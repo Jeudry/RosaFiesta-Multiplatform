@@ -1,4 +1,4 @@
-package com.rosafiesta.user.api.config
+package com.rosafiesta.api.user.api.config
 
 import com.rosafiesta.api.core.services.JwtService
 import jakarta.servlet.FilterChain
