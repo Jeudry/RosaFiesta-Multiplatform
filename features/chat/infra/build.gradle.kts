@@ -1,5 +1,5 @@
 plugins {
-    id("java-library")
+    id("rosafiesta.infra")
     id("rosafiesta.spring-boot-service")
     kotlin("plugin.spring")
 }
@@ -11,15 +11,7 @@ base {
     archivesName.set("chat-infra")
 }
 
-repositories {
-    mavenCentral()
-    maven { url = uri("https://repo.spring.io/milestone") }
-    maven { url = uri("https://repo.spring.io/snapshot") }
-}
-
 dependencies {
-    implementation(projects.core.domain)
-    implementation(projects.core.infra)
     implementation(projects.features.chat.domain)
     
     implementation(libs.spring.boot.starter.data.jpa)
@@ -27,14 +19,4 @@ dependencies {
     implementation(libs.spring.boot.starter.websocket)
     
     runtimeOnly(libs.postgresql)
-    
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(21)
 }

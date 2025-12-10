@@ -1,6 +1,7 @@
 plugins {
-    id("rosafiesta.kotlin-common")
-    id("java-library")
+    id("rosafiesta.service")
+    id("rosafiesta.spring-boot-service")
+    kotlin("plugin.spring")
     kotlin("plugin.jpa")
 }
 
@@ -14,14 +15,10 @@ base {
 dependencies {
     api(projects.features.user.domain)
     api(projects.features.user.infra)
-    implementation(projects.core.domain)
     implementation(projects.core.service)
-    implementation(projects.core.infra)
 
     implementation(libs.spring.boot.starter.security)
     implementation(libs.jwt.api)
     runtimeOnly(libs.jwt.impl)
     runtimeOnly(libs.jwt.jackson)
-
-    testImplementation(kotlin("test"))
 }

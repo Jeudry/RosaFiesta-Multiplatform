@@ -1,5 +1,5 @@
 plugins {
-    id("java-library")
+    id("rosafiesta.service")
     id("rosafiesta.spring-boot-service")
     kotlin("plugin.spring")
 }
@@ -11,29 +11,11 @@ base {
     archivesName.set("chat-service")
 }
 
-repositories {
-    mavenCentral()
-    maven { url = uri("https://repo.spring.io/milestone") }
-    maven { url = uri("https://repo.spring.io/snapshot") }
-}
-
 dependencies {
-    implementation(projects.core.domain)
-    implementation(projects.core.infra)
     implementation(projects.features.chat.domain)
     implementation(projects.features.chat.infra)
     
     implementation(libs.spring.boot.starter.data.jpa)
     implementation(libs.spring.boot.starter.amqp)
     implementation(libs.jackson.datatype.jsr310)
-    
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(21)
 }

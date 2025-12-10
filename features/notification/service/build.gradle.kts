@@ -1,6 +1,5 @@
 plugins {
-    id("rosafiesta.kotlin-common")
-    id("java-library")
+    id("rosafiesta.service")
 }
 
 group = "com.rosafiesta.notification"
@@ -13,7 +12,4 @@ base {
 dependencies {
     api(projects.features.notification.domain)
     api(projects.features.notification.infra)
-    implementation(projects.core.domain)
-
-    testImplementation(kotlin("test"))
 }

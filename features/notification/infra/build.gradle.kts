@@ -1,7 +1,7 @@
 plugins {
-    id("rosafiesta.kotlin-common")
-    id("java-library")
-    kotlin("plugin.jpa")
+    id("rosafiesta.infra")
+    id("rosafiesta.spring-boot-service")
+    kotlin("plugin.spring")
 }
 
 group = "com.rosafiesta.notification"
@@ -13,8 +13,6 @@ base {
 
 dependencies {
     api(projects.features.notification.domain)
-    implementation(projects.core.domain)
-    implementation(projects.core.infra)
 
     implementation(libs.spring.boot.starter.web)
     api(libs.spring.boot.starter.data.jpa)
@@ -23,6 +21,4 @@ dependencies {
     implementation(libs.spring.boot.starter.thymeleaf)
     implementation(libs.firebase.admin.sdk)
     runtimeOnly(libs.postgresql)
-
-    testImplementation(kotlin("test"))
 }
