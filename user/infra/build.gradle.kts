@@ -4,7 +4,7 @@ plugins {
     kotlin("plugin.jpa")
 }
 
-group = "com.rosafiesta"
+group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
 
 dependencies {

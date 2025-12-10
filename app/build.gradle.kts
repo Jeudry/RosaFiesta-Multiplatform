@@ -18,12 +18,19 @@ tasks {
 }
 dependencies {
     implementation(projects.core)
+    
     // User modules
     implementation(projects.user.domain)
     implementation(projects.user.infra)
     implementation(projects.user.service)
     implementation(projects.user.api)
-    implementation(projects.chat)
+    
+    // Chat modules
+    implementation(projects.chat.domain)
+    implementation(projects.chat.infra)
+    implementation(projects.chat.service)
+    implementation(projects.chat.api)
+    
     // Notification modules
     implementation(projects.notification.domain)
     implementation(projects.notification.infra)

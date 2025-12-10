@@ -1,6 +1,7 @@
 package com.rosafiesta.api.notification.infrastructure.message_queue
 
 import com.rosafiesta.api.core.domain.events.chat.ChatEvent
+import com.rosafiesta.api.core.infrastructure.message_queue.MessageQueues
 import com.rosafiesta.api.notification.infrastructure.service.PushNotificationService
 import org.springframework.amqp.rabbit.annotation.RabbitListener
 import org.springframework.stereotype.Component

@@ -24,13 +24,19 @@ rootProject.name = "rosafiesta-api"
 
 include("app")
 
-include("user:domain")
-include("user:infra")
-include("user:service")
-include("user:api")
-include("chat")
+include("chat:domain")
+include("chat:infra")
+include("chat:service")
+include("chat:api")
+
 include("notification:domain")
 include("notification:infra")
 include("notification:service")
 include("notification:api")
+
+include("user:domain")
+include("user:infra")
+include("user:service")
+include("user:api")
+
 include("core")
