@@ -1,15 +1,15 @@
-package com.rosafiesta.api.user.api.exception_handling
+package com.rosafiesta.user.api.exception_handling
 
 import com.rosafiesta.api.user.domain.exception.*
 import com.rosafiesta.api.core.domain.exceptions.InvalidTokenEx
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException
+import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestControllerAdvice
 
-@RestControllerAdvice
+@ControllerAdvice
 class AuthExceptionHandler {
 
     @ExceptionHandler(UserAlreadyExistsEx::class)
@@ -90,5 +90,10 @@ class AuthExceptionHandler {
                     "errors" to errors
                 )
             )
+    }
+
+    @ExceptionHandler(Exception::class)
+    fun handleAll(e: Exception): ResponseEntity<String> {
+        return ResponseEntity(e.message ?: "Internal server error", HttpStatus.INTERNAL_SERVER_ERROR)
     }
 }

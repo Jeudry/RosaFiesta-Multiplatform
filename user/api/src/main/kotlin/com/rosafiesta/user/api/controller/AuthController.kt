@@ -1,15 +1,15 @@
-package com.rosafiesta.api.user.api.controller
+package com.rosafiesta.user.api.controller
 
-import com.rosafiesta.api.user.api.config.IpRateLimit
-import com.rosafiesta.api.user.api.dtos.AuthenticatedUserDto
-import com.rosafiesta.api.user.api.dtos.ChangePasswordRequest
-import com.rosafiesta.api.user.api.dtos.EmailRequest
-import com.rosafiesta.api.user.api.dtos.LoginRequest
-import com.rosafiesta.api.user.api.dtos.RefreshTokenRequest
-import com.rosafiesta.api.user.api.dtos.RegisterRequest
-import com.rosafiesta.api.user.api.dtos.ResetPasswordRequest
-import com.rosafiesta.api.user.api.dtos.UserDto
-import com.rosafiesta.api.user.api.mappers.toDto
+import com.rosafiesta.user.api.config.IpRateLimit
+import com.rosafiesta.user.api.dtos.AuthenticatedUserDto
+import com.rosafiesta.user.api.dtos.ChangePasswordRequest
+import com.rosafiesta.user.api.dtos.EmailRequest
+import com.rosafiesta.user.api.dtos.LoginRequest
+import com.rosafiesta.user.api.dtos.RefreshTokenRequest
+import com.rosafiesta.user.api.dtos.RegisterRequest
+import com.rosafiesta.user.api.dtos.ResetPasswordRequest
+import com.rosafiesta.user.api.dtos.UserDto
+import com.rosafiesta.user.api.mappers.toDto
 import com.rosafiesta.api.core.api.utils.requestUserId
 import com.rosafiesta.api.user.infrastructure.rate_limiting.EmailRateLimiter
 import com.rosafiesta.api.user.service.AuthService

@@ -1,7 +1,7 @@
-package com.rosafiesta.api.user.api.mappers
+package com.rosafiesta.user.api.mappers
 
-import com.rosafiesta.api.user.api.dtos.AuthenticatedUserDto
-import com.rosafiesta.api.user.api.dtos.UserDto
+import com.rosafiesta.user.api.dtos.AuthenticatedUserDto
+import com.rosafiesta.user.api.dtos.UserDto
 import com.rosafiesta.api.user.domain.model.AuthenticatedUser
 import com.rosafiesta.api.user.domain.model.User
 
