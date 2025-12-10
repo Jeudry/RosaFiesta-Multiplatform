@@ -1,6 +1,7 @@
 plugins {
     id("rosafiesta.kotlin-common")
     id("java-library")
+    kotlin("plugin.serialization")
 }
 group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
@@ -19,5 +20,6 @@ dependencies {
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.data.redis)
     implementation(libs.jwt.api)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     testImplementation(kotlin("test"))
 }
