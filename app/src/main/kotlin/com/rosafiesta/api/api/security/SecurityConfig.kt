@@ -1,6 +1,6 @@
 package com.rosafiesta.api.api.security
 
-import com.rosafiesta.api.api.config.JwtAuthFilter
+import com.rosafiesta.api.user.api.config.JwtAuthFilter
 import jakarta.servlet.DispatcherType
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

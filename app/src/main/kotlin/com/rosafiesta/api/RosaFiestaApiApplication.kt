@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.EnableScheduling
 
 @SpringBootApplication
 @EnableScheduling
-class AdventistApplication
+class RosaFiestaApiApplication
 
 fun main(args: Array<String>) {
-	runApplication<AdventistApplication>(*args)
+  runApplication<RosaFiestaApiApplication>(*args)
 }
