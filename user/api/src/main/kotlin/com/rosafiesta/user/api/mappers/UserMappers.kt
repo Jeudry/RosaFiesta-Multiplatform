@@ -15,7 +15,7 @@ fun AuthenticatedUser.toDto(): AuthenticatedUserDto {
 
 fun User.toDto(): UserDto {
     return UserDto(
-        id = this.id.toString(),
+        id = this.id,
         email = this.email,
         username = this.username,
         hasEmailVerified = this.hasEmailVerified
