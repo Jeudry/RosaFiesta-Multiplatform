@@ -1,7 +1,6 @@
 plugins {
     id("rosafiesta.kotlin-common")
     id("java-library")
-    kotlin("plugin.serialization")
 }
 group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
