@@ -7,6 +7,10 @@ plugins {
 group = "com.rosafiesta.user"
 version = "0.0.1-SNAPSHOT"
 
+base {
+    archivesName.set("user-infra")
+}
+
 dependencies {
     api(projects.user.domain)
     implementation(projects.core.domain)

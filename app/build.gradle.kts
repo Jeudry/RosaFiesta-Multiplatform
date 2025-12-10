@@ -10,7 +10,6 @@ springBoot {
 }
 tasks {
   named<BootJar>("bootJar") {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from(project(":notification:infra").projectDir.resolve("src/main/resources")){
       into("")
     }

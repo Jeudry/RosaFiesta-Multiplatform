@@ -6,6 +6,10 @@ plugins {
 group = "com.rosafiesta.core"
 version = "0.0.1-SNAPSHOT"
 
+base {
+    archivesName.set("core-service")
+}
+
 repositories {
     mavenCentral()
     maven { url = uri("https://repo.spring.io/milestone") }
