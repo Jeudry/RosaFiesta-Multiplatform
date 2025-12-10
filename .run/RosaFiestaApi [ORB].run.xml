@@ -8,7 +8,7 @@
     </envs>
     <module name="rosafiesta-api.app.main" />
     <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=orb" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="com.rosafiesta.api.RosaFiestaApiApplication" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.rosafiesta.RosaFiestaApiApplication" />
     <option name="VM_PARAMETERS" value="-Dspring.profiles.active=orb" />
     <extension name="com.fapiko.jetbrains.plugins.better_direnv.runconfigs.IdeaRunConfigurationExtension">
       <option name="DIRENV_ENABLED" value="false" />
