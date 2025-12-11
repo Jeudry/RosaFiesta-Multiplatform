@@ -5,7 +5,9 @@ import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.entities.ChatEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
+import org.springframework.stereotype.Repository
 
+@Repository
 interface ChatRepository: JpaRepository<ChatEntity, ChatId> {
     // Query a chat by id where the user is a participant
     @Query("""

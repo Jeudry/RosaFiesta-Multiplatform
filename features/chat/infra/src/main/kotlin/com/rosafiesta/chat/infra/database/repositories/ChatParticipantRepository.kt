@@ -4,8 +4,10 @@ import com.rosafiesta.core.domain.types.UserId
 import com.rosafiesta.chat.infra.database.entities.ChatParticipantEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
+import org.springframework.stereotype.Repository
 import java.util.UUID
 
+@Repository
 interface ChatParticipantRepository: JpaRepository<ChatParticipantEntity, UserId> {
     fun findByUserIdIn(userId: List<UserId>): Set<ChatParticipantEntity>
     @Query("""

@@ -27,8 +27,8 @@ echo "🚀 Iniciando servicios desde cero..."
 docker-compose -f docker-compose.orb.yml up -d
 
 # 6. Esperar a que Postgres se inicialice completamente
-echo "⏳ Esperando 25 segundos para inicialización completa..."
-sleep 25
+echo "⏳ Esperando 15 segundos para inicialización completa..."
+sleep 15
 
 # 7. Verificar estado
 echo ""

@@ -8,8 +8,10 @@ import org.springframework.data.domain.Pageable
 import org.springframework.data.domain.Slice
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
+import org.springframework.stereotype.Repository
 import java.time.Instant
 
+@Repository
 interface ChatMessageRepository: JpaRepository<ChatMessageEntity, ChatMessageId> {
     @Query("""
         SELECT m

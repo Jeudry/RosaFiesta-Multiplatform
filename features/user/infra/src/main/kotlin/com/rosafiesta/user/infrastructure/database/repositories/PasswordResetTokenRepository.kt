@@ -6,8 +6,10 @@ import com.rosafiesta.user.infrastructure.database.entities.UserEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Modifying
 import org.springframework.data.jpa.repository.Query
+import org.springframework.stereotype.Repository
 import java.time.Instant
 
+@Repository
 interface PasswordResetTokenRepository: JpaRepository<PasswordResetTokenEntity, Long> {
     fun findByToken(token: String): PasswordResetTokenEntity?
     fun deleteByExpiresAtLessThan(now: Instant)
