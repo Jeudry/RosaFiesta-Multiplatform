@@ -44,10 +44,10 @@ dependencies {
   implementation(libs.spring.boot.starter.security)
   implementation(libs.jackson.datatype.jsr310)
   implementation(libs.kotlin.reflect)
-  implementation(libs.flyway.core)
   implementation(libs.flyway.postgresql)
-  implementation(libs.liquibase.core)
-  implementation("org.springframework.boot:spring-boot-starter-flyway")
-  implementation("org.springframework.boot:spring-boot-starter-liquibase")
+  implementation(libs.flyway.starter)
+  /*
+  implementation(libs.liquibase.starter)
+  */
   runtimeOnly(libs.postgresql)
 }

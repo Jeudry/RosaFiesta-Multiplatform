@@ -34,7 +34,8 @@ spring:
       username: "default"
       connection-timeout: 5000
       timeout: 2000ms
-
+      repositories:
+        enabled: false
 
   jpa:
     hibernate:

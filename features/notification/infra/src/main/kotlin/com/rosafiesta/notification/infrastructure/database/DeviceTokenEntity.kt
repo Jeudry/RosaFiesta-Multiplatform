@@ -4,6 +4,7 @@ import com.rosafiesta.core.domain.types.UserId
 import jakarta.persistence.*
 import org.hibernate.annotations.CreationTimestamp
 import java.time.Instant
+import java.util.UUID
 
 @Entity
 @Table(
@@ -27,4 +28,6 @@ class DeviceTokenEntity (
   var platform: PlatformEntity,
   @CreationTimestamp
   var createdAt: Instant = Instant.now(),
-)
+) {
+    constructor() : this(0, UUID.randomUUID(), "", PlatformEntity.ANDROID, Instant.now())
+}
