@@ -38,6 +38,12 @@ dependencies {
   implementation(projects.features.notification.infra)
   implementation(projects.features.notification.service)
   implementation(projects.features.notification.api)
+  // Products modules
+  implementation(projects.features.products.domain)
+  implementation(projects.features.products.infra)
+  implementation(projects.features.products.service)
+  implementation(projects.features.products.api)
+  
   implementation(libs.spring.boot.starter.data.redis)
   implementation(libs.spring.boot.starter.amqp)
   implementation(libs.spring.boot.starter.data.jpa)
