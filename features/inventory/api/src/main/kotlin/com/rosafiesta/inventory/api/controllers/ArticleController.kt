@@ -5,7 +5,7 @@ package com.rosafiesta.inventory.api.controllers
 import com.rosafiesta.core.api.utils.ValidationUtils
 import com.rosafiesta.core.domain.types.ArticleId
 import com.rosafiesta.inventory.service.ArticleService
-import com.rosafiesta.shared.api.user.dto.ArticleDto
+import com.rosafiesta.shared.service.dto.ArticleDto
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

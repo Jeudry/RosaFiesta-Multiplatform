@@ -17,7 +17,6 @@ base {
 
 dependencies {
     api(projects.shared.domain)
-    implementation(libs.kotlinx.serialization.json)
     testImplementation(kotlin("test"))
 }
 

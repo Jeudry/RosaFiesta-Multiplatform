@@ -1,8 +1,7 @@
 package com.rosafiesta.inventory.infra.db.entities
 
 import com.rosafiesta.core.domain.types.ArticleId
-import com.rosafiesta.shared.inventory.model.Article
-import com.rosafiesta.shared.inventory.model.Article.Companion.CODE_MAX_LENGTH
+import com.rosafiesta.inventory.domain.model.Article.Companion.CODE_MAX_LENGTH
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -26,18 +25,4 @@ class ArticleEntity(
     @Column(nullable = false, length = CODE_MAX_LENGTH)
     var code: String,
 ) {
-    /// <summary>Converts this entity to a domain Article.</summary>
-    /// <returns>The domain Article.</returns>
-    fun toDomain(): Article {
-        return Article(id, name, code)
-    }
-
-    companion object {
-        /// <summary>Creates an ArticleEntity from a domain Article.</summary>
-        /// <param name="article">The domain Article.</param>
-        /// <returns>The ArticleEntity.</returns>
-        fun fromDomain(article: Article): ArticleEntity {
-            return ArticleEntity(article.id, article.name, article.code)
-        }
-    }
 }

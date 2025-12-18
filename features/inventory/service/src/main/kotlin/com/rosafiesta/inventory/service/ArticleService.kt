@@ -3,7 +3,7 @@
 package com.rosafiesta.inventory.service
 
 import com.rosafiesta.core.domain.types.ArticleId
-import com.rosafiesta.shared.api.user.dto.ArticleDto
+import com.rosafiesta.shared.service.dto.ArticleDto
 import kotlin.uuid.ExperimentalUuidApi
 
 /**

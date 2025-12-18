@@ -54,6 +54,8 @@ scripts/.env.local
 build/
 */build/
 app/build/
+bin/
+*/bin/
 
 # Ignorar archivos temporales y de sistema
 *.tmp

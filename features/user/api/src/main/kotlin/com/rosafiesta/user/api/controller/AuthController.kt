@@ -10,8 +10,7 @@ import com.rosafiesta.user.api.dtos.ResetPasswordRequest
 import com.rosafiesta.user.api.dtos.UserDto
 import com.rosafiesta.user.api.mappers.toDto
 import com.rosafiesta.core.api.utils.requestUserId
-import com.rosafiesta.shared.api.user.dto.RegisterDto
-import com.rosafiesta.shared.user.dto.RegisterDto
+import com.rosafiesta.user.api.dtos.RegisterRequest
 import com.rosafiesta.user.infrastructure.rate_limiting.EmailRateLimiter
 import com.rosafiesta.user.service.AuthService
 import com.rosafiesta.user.service.EmailVerificationService
@@ -40,9 +39,8 @@ class AuthController(
         unit = TimeUnit.HOURS
     )
     fun register(
-      @RequestBody registerRequest: RegisterDto
+      @RequestBody registerRequest: RegisterRequest
     ): UserDto {
-        registerRequest.validateAll()
         return authService.register(
             username = registerRequest.username,
             email = registerRequest.email,

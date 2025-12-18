@@ -2,6 +2,8 @@ package com.rosafiesta.shared.service.dto
 
 import com.rosafiesta.shared.domain.inventory.validation.ArticleValidationUtils
 import com.rosafiesta.shared.domain.validation.ValidatableDto
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /** DTO for article data transfer, shared in KMP. */
 @Serializable

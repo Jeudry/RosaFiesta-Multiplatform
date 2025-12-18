@@ -1,21 +1,29 @@
 package com.rosafiesta.inventory.domain.repository
 
 import com.rosafiesta.core.domain.types.ArticleId
-import com.rosafiesta.shared.inventory.model.Article
+import com.rosafiesta.inventory.domain.model.Article
 
-/// <summary>Repository interface for Article domain operations.</summary>
+/**
+ * Repository interface for Article domain operations.
+ */
 interface ArticleRepository {
-    /// <summary>Finds an article by its ID.</summary>
-    /// <param name="id">The article ID.</param>
-    /// <returns>The article if found, null otherwise.</returns>
+    /**
+     * Finds an article by its ID.
+     * @param id The article ID.
+     * @return The article if found, null otherwise.
+     */
     fun findById(id: ArticleId): Article?
 
-    /// <summary>Saves an article.</summary>
-    /// <param name="article">The article to save.</param>
-    /// <returns>The saved article.</returns>
+    /**
+     * Saves an article.
+     * @param article The article to save.
+     * @return The saved article.
+     */
     fun save(article: Article): Article
 
-    /// <summary>Deletes an article by its ID.</summary>
-    /// <param name="id">The article ID.</param>
+    /**
+     * Deletes an article by its ID.
+     * @param id The article ID.
+     */
     fun deleteById(id: ArticleId)
 }
