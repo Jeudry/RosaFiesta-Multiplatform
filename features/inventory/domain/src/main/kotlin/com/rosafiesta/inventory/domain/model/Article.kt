@@ -1,6 +1,9 @@
+@file:OptIn(ExperimentalUuidApi::class)
+
 package com.rosafiesta.inventory.domain.model
 
 import com.rosafiesta.core.domain.types.ArticleId
+import kotlin.uuid.ExperimentalUuidApi
 
 data class Article(
   val id: ArticleId,

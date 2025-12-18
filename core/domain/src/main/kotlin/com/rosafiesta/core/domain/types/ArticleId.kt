@@ -1,5 +1,8 @@
+@file:OptIn(ExperimentalUuidApi::class)
+
 package com.rosafiesta.core.domain.types
 
-import java.util.UUID
+import kotlin.uuid.ExperimentalUuidApi
+import kotlin.uuid.Uuid
 
-typealias ArticleId = UUID
+typealias ArticleId = Uuid

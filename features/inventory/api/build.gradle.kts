@@ -10,6 +10,7 @@ base {
 dependencies {
     api(projects.features.inventory.domain)
     api(projects.features.inventory.service)
+    implementation(projects.shared.api)
     implementation(projects.core.service)
     implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter.security)

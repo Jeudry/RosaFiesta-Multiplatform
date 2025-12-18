@@ -16,6 +16,7 @@ dependencies {
     api(projects.features.inventory.domain)
     api(projects.features.inventory.infra)
     implementation(projects.core.service)
+    implementation(projects.shared.service)
 
     implementation(libs.spring.boot.starter.security)
     implementation(libs.jwt.api)
