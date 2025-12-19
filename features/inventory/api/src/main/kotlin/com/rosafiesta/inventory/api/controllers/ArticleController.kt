@@ -7,6 +7,7 @@ import com.rosafiesta.core.domain.types.ArticleId
 import com.rosafiesta.inventory.service.ArticleService
 import com.rosafiesta.shared.service.dto.ArticleDto
 import org.springframework.http.ResponseEntity
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -26,6 +27,7 @@ class ArticleController(
    * @param articleDto The article data transfer object.
    * @return ResponseEntity containing the ID of the added article.
    */
+  @PreAuthorize("isAuthenticated()")
   @PostMapping("add_article")
   fun addArticle(
     @RequestBody articleDto: ArticleDto
