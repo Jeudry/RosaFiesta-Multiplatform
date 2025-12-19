@@ -1,5 +1,6 @@
 package com.rosafiesta.user.api.controller
 
+import com.rosafiesta.core.api.utils.requestUserId
 import com.rosafiesta.user.api.config.IpRateLimit
 import com.rosafiesta.user.api.dtos.AuthenticatedUserDto
 import com.rosafiesta.user.api.dtos.ChangePasswordRequest
@@ -9,7 +10,6 @@ import com.rosafiesta.user.api.dtos.RefreshTokenRequest
 import com.rosafiesta.user.api.dtos.ResetPasswordRequest
 import com.rosafiesta.user.api.dtos.UserDto
 import com.rosafiesta.user.api.mappers.toDto
-import com.rosafiesta.core.api.utils.requestUserId
 import com.rosafiesta.user.api.dtos.RegisterRequest
 import com.rosafiesta.user.infrastructure.rate_limiting.EmailRateLimiter
 import com.rosafiesta.user.service.AuthService

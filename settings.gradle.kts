@@ -1,14 +1,3 @@
-import org.gradle.kotlin.dsl.internal.relocated.kotlin.metadata.internal.metadata.deserialization.VersionRequirementTable.Companion.create
-import org.gradle.kotlin.dsl.maven
-
-dependencyResolutionManagement {
-    versionCatalogs {
-        create("libs") {
-            from(files("gradle/libs.version.toml"))
-        }
-    }
-}
-
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -18,7 +7,6 @@ pluginManagement {
     }
 }
 
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "rosafiesta-api"
 

@@ -1,7 +1,6 @@
 package com.rosafiesta.core.api.utils
 
-import com.rosafiesta.shared.validation.ValidatableDto
-import org.springframework.http.ResponseEntity
+import com.rosafiesta.shared.domain.validation.ValidatableDto
 
 /** Utility functions for API responses and validations. */
 object ValidationUtils {

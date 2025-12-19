@@ -4,8 +4,9 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity
 
 /// <summary>
-/// Security configuration to enable method-level security annotations.
+/// Enables method-level security annotations (e.g. @PreAuthorize) for the application.
+/// This configuration is separated from the HTTP security configuration to avoid bean name collisions.
 /// </summary>
-@Configuration
+@Configuration("methodSecurityConfig")
 @EnableMethodSecurity
-class SecurityConfig
+class MethodSecurityConfig

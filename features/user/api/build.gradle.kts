@@ -12,6 +12,7 @@ dependencies {
     api(projects.features.user.domain)
     api(projects.features.user.service)
     implementation(projects.core.service)
+    implementation(projects.core.api)
     implementation(projects.shared.api)
     implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter.security)
